@@ -1,6 +1,6 @@
 (() => {
   'use strict';
-  const releaseKey = 'gao-kexin.approved-copy-release.2026-11-14.v2';
+  const releaseKey = 'gao-kexin.approved-copy-release.2026-11-15.v3';
   const draftKey = 'gao-kexin.home.bio-draft.v1';
   const blocksKey = 'gao-kexin.home.bio-blocks.v1';
   const sectionsKey = 'gao-kexin.section-copy-drafts.v1';
@@ -33,6 +33,10 @@
     "Blog — a place to think in writing, explore questions, and revisit my views as I learn."
   ],
   "sectionCorrections": {
+    "mindset.limits.title": {
+      "from": ["My Limits"],
+      "to": "My Current Limits"
+    },
     "research.dimensions.title": {
       "from": [
         "A Survery: Evaluation Dimensions for VLAs and World Action Models (In Progress)"
