@@ -1,0 +1,11 @@
+.copy-format-toolbar[hidden] { display: none !important; }
+.copy-format-toolbar { position: fixed; z-index: 10000; display: flex; align-items: center; gap: 3px; padding: 3px; max-width: calc(100vw - 16px); background: #202020; color: #fff; border: 1px solid #ffffff35; border-radius: 6px; box-shadow: 0 3px 12px #0002; font: 13px/1.2 Helvetica, Arial, sans-serif; }
+.copy-bold-button { display: flex; align-items: center; gap: 9px; min-height: 32px; padding: 5px 10px; border: 0; border-radius: 3px; background: transparent; color: inherit; font: inherit; cursor: pointer; }
+.copy-bold-button b { font: 700 20px/1 Georgia, serif; }
+.copy-bold-button:hover, .copy-bold-button[aria-pressed="true"] { background: #ffffff30; }
+.copy-bold-button:focus-visible { outline: 2px solid #fff; outline-offset: 1px; }
+[data-copy-format] :is(b, strong) { font-weight: 700; font-synthesis: weight; }
+.copy-size-select { min-width: 100px; max-width: 138px; height: 32px; padding: 3px 4px; border: 1px solid #ffffff45; border-radius: 3px; background: #202020; color: #fff; font: inherit; color-scheme: dark; cursor: pointer; }
+.copy-size-step { min-width: 30px; min-height: 32px; padding: 4px; border: 0; border-radius: 3px; background: transparent; color: inherit; font: inherit; cursor: pointer; }
+.copy-size-step:hover { background: #ffffff30; }
+.copy-size-step:focus-visible, .copy-size-select:focus-visible { outline: 2px solid #fff; outline-offset: 1px; }

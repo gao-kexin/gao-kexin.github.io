@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "Kexin Serif";
+  src: url("../fonts/KexinSerif-ExtraBoldItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 800;
+  font-display: swap;
+}
+
+.site-name { font-family: "Kexin Serif", "Fraunces", Georgia, serif; }

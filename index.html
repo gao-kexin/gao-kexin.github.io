@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+
+<html lang="en" data-reading-mode="true">
+<head><meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="GAO Kexin — Mindset, Research, Projects, Mind maps and Blog." name="description"/>
+<meta content="light" name="color-scheme"/>
+<meta content="noindex, nofollow" name="robots"/>
+<title>GAO Kexin</title>
+<script>
+// Fresh entries open at the beginning, including previously copied section URLs.
+history.scrollRestoration = 'manual';
+if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+// Resolve the reading sheet before its first paint; deferred scripts use these same values.
+(() => {
+  function fitViewport() {
+    const width = window.innerWidth;
+    const scale = width >= 1000 ? Math.min(1, (width / 2 - 15) / 1320) : 1;
+    const style = document.documentElement.style;
+    style.setProperty('--editorial-scale', String(scale));
+    style.setProperty('--editorial-shift', `${-(width - 1320 * scale) / (2 * scale)}px`);
+  }
+  fitViewport();
+  window.addEventListener('resize', fitViewport, { passive: true });
+  window.addEventListener('pageshow', fitViewport, { passive: true });
+})();
+</script>
+<link href="data:," rel="icon"/>
+<link rel="preload" href="./fonts/FrederickatheGreat-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous"/>
+<link rel="preload" href="./fonts/URWClassico-Regular.otf" as="font" type="font/otf" crossorigin="anonymous"/>
+<link rel="preload" href="./fonts/PermanentMarker-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous"/>
+<link href="./css/layout.css" rel="stylesheet"/>
+<link href="./css/editorial.css" rel="stylesheet"/>
+<link href="./css/template.css" rel="stylesheet"/>
+<link href="./css/split.css?v=stable-first-paint" rel="stylesheet"/>
+<link href="./css/home-masthead.css?v=fredericka" rel="stylesheet"/>
+<link href="./css/portrait-note.css?v=spaced-annotation" rel="stylesheet"/>
+<link href="./css/bio-editor.css?v=blog-scroll-space" rel="stylesheet"/>
+<link href="./css/portrait-contacts.css?v=webmail-compose" rel="stylesheet"/>
+<link href="./css/section-palette.css?v=scroll-overlay" rel="stylesheet"/>
+<link href="./css/projects.css?v=purpose-labels" rel="stylesheet"/>
+<link href="./css/mindset-research.css?v=research-natural-gap" rel="stylesheet"/>
+<link href="./css/copy-formatting.css?v=selection-size" rel="stylesheet"/>
+<link href="./css/typography.css?v=stable-first-paint" rel="stylesheet"/>
+<link href="./css/navigation.css?v=bold-navigation" rel="stylesheet"/>
+  <script defer src="./js/approved-copy-release.js?v=approved-2026-11-14-aliases"></script>
+  <script defer src="./js/title-case.js?v=authored-article"></script>
+<script defer src="./js/action-copy-release.js?v=purpose-labels"></script>
+  <script defer src="./js/copy-formatting.js?v=reading-mode"></script>
+<script defer="" src="./js/portrait-contacts.js?v=purpose-labels"></script>
+<script defer="" src="./js/section-navigation.js?v=scroll-overlay"></script>
+<script defer="" src="./js/template.js?v=stable-first-paint"></script>
+<script defer="" src="./js/home-scrollbar.js?v=scroll-overlay"></script>
+<script defer="" src="./js/bio-editor.js?v=purpose-labels"></script>
+<script defer="" src="./js/detail-controller.js?v=smooth-details"></script>
+<script defer="" src="./js/projects.js?v=purpose-labels"></script>
+<script defer="" src="./js/section-copy.js?v=rich-articles"></script>
+<script defer="" src="./js/section-details.js?v=reading-lists"></script>
+<script defer src="./js/overview-navigation.js?v=whole-area"></script>
+</head>
+<body>
+<svg class="research-loop-defs" aria-hidden="true" focusable="false" width="0" height="0">
+<defs>
+<marker id="research-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 9 5 1 9" fill="none" stroke="#171717" stroke-width="1.4"/></marker>
+<symbol id="research-loop" viewBox="-20 10 900 390">
+<g fill="none" stroke="#171717" stroke-width="1.3" marker-end="url(#research-arrow)">
+<path d="M126 67H143"/><path d="M273 67H290"/><path d="M420 67H437"/><path d="M567 67H584"/><path d="M714 67H731"/>
+<path d="M797 106V164"/>
+<path d="M733 207H714"/><path d="M586 207H567"/><path d="M439 207H420"/>
+<path d="M292 207H282V67H290"/>
+</g>
+<g stroke="#171717" stroke-opacity=".33" stroke-width="1"><path d="M356 246V300"/><path d="M503 246V300"/><path d="M650 246V300"/><path d="M797 246V300"/></g>
+<g fill="#fff" stroke="#171717" stroke-width="1.3">
+<rect x="0" y="30" width="124" height="74" rx="6"/><rect x="147" y="30" width="124" height="74" rx="6"/><rect x="294" y="30" width="124" height="74" rx="6"/><rect x="441" y="30" width="124" height="74" rx="6"/><rect x="588" y="30" width="124" height="74" rx="6" fill="#ececea"/><rect x="735" y="30" width="124" height="74" rx="6"/>
+<rect x="294" y="170" width="124" height="74" rx="6"/><rect x="441" y="170" width="124" height="74" rx="6"/><rect x="588" y="170" width="124" height="74" rx="6"/><rect x="735" y="170" width="124" height="74" rx="6"/>
+<rect x="18" y="300" width="824" height="82" rx="6" fill="#f6f6f4"/>
+</g>
+<g fill="#171717" font-size="16" text-anchor="middle">
+<text x="62" y="72">Task &amp; goal</text>
+<text x="209" y="72">Observe</text>
+<text x="356" y="62">Update state<tspan x="356" dy="19">&amp; progress</tspan></text>
+<text x="503" y="62">Propose actions<tspan x="503" dy="19">or a plan</tspan></text>
+<text x="650" y="62">Predict possible<tspan x="650" dy="19">outcomes</tspan></text>
+<text x="797" y="62">Select &amp;<tspan x="797" dy="19">execute</tspan></text>
+<text x="797" y="202">Environment<tspan x="797" dy="19">changes</tspan></text>
+<text x="650" y="202">New<tspan x="650" dy="19">observation</tspan></text>
+<text x="503" y="202">Done or<tspan x="503" dy="19">off track?</tspan></text>
+<text x="356" y="190">Continue,<tspan x="356" dy="19">recover, replan</tspan><tspan x="356" dy="19">or stop</tspan></text>
+<text x="430" y="333" font-size="17">External evaluation records, kept separate from the model’s internal judgment</text>
+<text x="430" y="361" font-size="15" fill="#4c4c4c">success · progress · failure stage · recovery · safety · latency · resource cost</text>
+</g>
+</symbol>
+</defs>
+</svg>
+
+<svg class="portrait-filter-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+<defs>
+<filter id="portrait-sky-key" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+<feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  8 0 -8 0 2" result="foreground"/>
+<feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 -5 0 3" result="dark-details"/>
+<feComposite in="foreground" in2="dark-details" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="subject-mask"/>
+<feComposite in="SourceGraphic" in2="subject-mask" operator="in"/>
+</filter>
+</defs>
+</svg>
+<div class="split-layout">
+<section aria-label="左侧个人主页模板" class="split-panel split-panel-left" tabindex="0">
+<div class="editorial-surface">
+<main aria-label="GAO Kexin personal website" class="page is-mono">
+<section aria-label="个人介绍区域" class="section" id="header">
+<header class="home-headline">
+<h1 class="site-name" data-slot="text-02">GAO Kexin</h1>
+</header>
+<article id="profile">
+<div class="columns is-multiline no-margin">
+<div class="column no-margin undivided is-one-quarter">
+<div class="portrait-signature">
+<figure class="image is-square">
+<div class="media-slot avatar-slot avatar-photo-frame" data-slot="image-01">
+<img class="avatar-photo" src="./images/gao-kexin-portrait-clean.png" alt="GAO Kexin" width="1536" height="1024" decoding="async" fetchpriority="high"/>
+</div>
+</figure>
+<span class="portrait-note-arrow" aria-hidden="true"></span>
+<div class="portrait-note">
+<span class="portrait-note-text"><span>First-principles</span> <span>Devotee</span></span>
+</div>
+</div>
+<nav class="portrait-contacts" aria-label="Contact GAO Kexin">
+<button id="email-open" type="button" aria-controls="email-panel" aria-expanded="false">Email</button>
+<span aria-hidden="true">·</span>
+<a href="https://www.linkedin.com/in/gaokexin/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+<span aria-hidden="true">·</span>
+<button id="wechat-open" type="button" aria-controls="wechat-panel" aria-expanded="false">WeChat</button>
+</nav>
+<div id="email-panel" class="contact-panel" role="region" aria-label="Email contact" hidden>
+<span id="email-address" class="email-address">kgaoag [at] connect [dot] ust [dot] hk</span>
+<div class="contact-actions">
+<button id="email-copy" type="button">Copy address</button>
+<button id="email-write" type="button" aria-controls="email-composer-options" aria-expanded="false">Compose email</button>
+</div>
+<div id="email-composer-options" class="contact-actions email-composer-options" role="group" aria-label="Choose your email service" hidden>
+<button type="button" data-email-service="gmail">Gmail ↗</button>
+<button type="button" data-email-service="outlook">Outlook ↗</button>
+</div>
+<p id="email-copy-status" class="contact-copy-status" role="status" aria-live="polite"></p>
+</div>
+<div id="wechat-panel" class="contact-panel" role="region" aria-label="WeChat QR code" hidden>
+<div class="wechat-qr-window">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 49 49" width="320" height="320" role="img" aria-labelledby="qr-title" shape-rendering="crispEdges">
+<title id="qr-title">GAO Kexin WeChat QR code</title>
+<rect class="qr-paper" width="49" height="49" fill="#ffffff"/>
+<path class="qr-ink" d="M4,4h1v1h-1z M5,4h1v1h-1z M6,4h1v1h-1z M7,4h1v1h-1z M8,4h1v1h-1z M9,4h1v1h-1z M10,4h1v1h-1z M12,4h1v1h-1z M18,4h1v1h-1z M21,4h1v1h-1z M22,4h1v1h-1z M23,4h1v1h-1z M26,4h1v1h-1z M30,4h1v1h-1z M33,4h1v1h-1z M35,4h1v1h-1z M38,4h1v1h-1z M39,4h1v1h-1z M40,4h1v1h-1z M41,4h1v1h-1z M42,4h1v1h-1z M43,4h1v1h-1z M44,4h1v1h-1z M4,5h1v1h-1z M10,5h1v1h-1z M12,5h1v1h-1z M14,5h1v1h-1z M15,5h1v1h-1z M17,5h1v1h-1z M18,5h1v1h-1z M19,5h1v1h-1z M20,5h1v1h-1z M23,5h1v1h-1z M25,5h1v1h-1z M26,5h1v1h-1z M27,5h1v1h-1z M28,5h1v1h-1z M31,5h1v1h-1z M33,5h1v1h-1z M36,5h1v1h-1z M38,5h1v1h-1z M44,5h1v1h-1z M4,6h1v1h-1z M6,6h1v1h-1z M7,6h1v1h-1z M8,6h1v1h-1z M10,6h1v1h-1z M12,6h1v1h-1z M14,6h1v1h-1z M15,6h1v1h-1z M17,6h1v1h-1z M23,6h1v1h-1z M24,6h1v1h-1z M25,6h1v1h-1z M26,6h1v1h-1z M30,6h1v1h-1z M31,6h1v1h-1z M32,6h1v1h-1z M33,6h1v1h-1z M34,6h1v1h-1z M38,6h1v1h-1z M40,6h1v1h-1z M41,6h1v1h-1z M42,6h1v1h-1z M44,6h1v1h-1z M4,7h1v1h-1z M6,7h1v1h-1z M7,7h1v1h-1z M8,7h1v1h-1z M10,7h1v1h-1z M13,7h1v1h-1z M15,7h1v1h-1z M17,7h1v1h-1z M18,7h1v1h-1z M22,7h1v1h-1z M31,7h1v1h-1z M38,7h1v1h-1z M40,7h1v1h-1z M41,7h1v1h-1z M42,7h1v1h-1z M44,7h1v1h-1z M4,8h1v1h-1z M6,8h1v1h-1z M7,8h1v1h-1z M8,8h1v1h-1z M10,8h1v1h-1z M13,8h1v1h-1z M17,8h1v1h-1z M20,8h1v1h-1z M21,8h1v1h-1z M22,8h1v1h-1z M23,8h1v1h-1z M24,8h1v1h-1z M25,8h1v1h-1z M28,8h1v1h-1z M29,8h1v1h-1z M30,8h1v1h-1z M32,8h1v1h-1z M34,8h1v1h-1z M36,8h1v1h-1z M38,8h1v1h-1z M40,8h1v1h-1z M41,8h1v1h-1z M42,8h1v1h-1z M44,8h1v1h-1z M4,9h1v1h-1z M10,9h1v1h-1z M12,9h1v1h-1z M17,9h1v1h-1z M18,9h1v1h-1z M19,9h1v1h-1z M23,9h1v1h-1z M25,9h1v1h-1z M26,9h1v1h-1z M27,9h1v1h-1z M28,9h1v1h-1z M29,9h1v1h-1z M31,9h1v1h-1z M38,9h1v1h-1z M44,9h1v1h-1z M4,10h1v1h-1z M5,10h1v1h-1z M6,10h1v1h-1z M7,10h1v1h-1z M8,10h1v1h-1z M9,10h1v1h-1z M10,10h1v1h-1z M12,10h1v1h-1z M14,10h1v1h-1z M16,10h1v1h-1z M18,10h1v1h-1z M20,10h1v1h-1z M22,10h1v1h-1z M24,10h1v1h-1z M26,10h1v1h-1z M28,10h1v1h-1z M30,10h1v1h-1z M32,10h1v1h-1z M34,10h1v1h-1z M36,10h1v1h-1z M38,10h1v1h-1z M39,10h1v1h-1z M40,10h1v1h-1z M41,10h1v1h-1z M42,10h1v1h-1z M43,10h1v1h-1z M44,10h1v1h-1z M12,11h1v1h-1z M13,11h1v1h-1z M14,11h1v1h-1z M18,11h1v1h-1z M20,11h1v1h-1z M23,11h1v1h-1z M25,11h1v1h-1z M26,11h1v1h-1z M30,11h1v1h-1z M32,11h1v1h-1z M6,12h1v1h-1z M7,12h1v1h-1z M8,12h1v1h-1z M10,12h1v1h-1z M12,12h1v1h-1z M14,12h1v1h-1z M18,12h1v1h-1z M19,12h1v1h-1z M26,12h1v1h-1z M28,12h1v1h-1z M29,12h1v1h-1z M30,12h1v1h-1z M33,12h1v1h-1z M34,12h1v1h-1z M35,12h1v1h-1z M36,12h1v1h-1z M37,12h1v1h-1z M38,12h1v1h-1z M39,12h1v1h-1z M42,12h1v1h-1z M43,12h1v1h-1z M44,12h1v1h-1z M6,13h1v1h-1z M8,13h1v1h-1z M14,13h1v1h-1z M18,13h1v1h-1z M24,13h1v1h-1z M27,13h1v1h-1z M29,13h1v1h-1z M30,13h1v1h-1z M32,13h1v1h-1z M33,13h1v1h-1z M34,13h1v1h-1z M35,13h1v1h-1z M36,13h1v1h-1z M37,13h1v1h-1z M38,13h1v1h-1z M39,13h1v1h-1z M40,13h1v1h-1z M42,13h1v1h-1z M44,13h1v1h-1z M5,14h1v1h-1z M7,14h1v1h-1z M9,14h1v1h-1z M10,14h1v1h-1z M11,14h1v1h-1z M12,14h1v1h-1z M16,14h1v1h-1z M21,14h1v1h-1z M22,14h1v1h-1z M25,14h1v1h-1z M27,14h1v1h-1z M28,14h1v1h-1z M29,14h1v1h-1z M31,14h1v1h-1z M32,14h1v1h-1z M33,14h1v1h-1z M34,14h1v1h-1z M36,14h1v1h-1z M38,14h1v1h-1z M5,15h1v1h-1z M6,15h1v1h-1z M11,15h1v1h-1z M12,15h1v1h-1z M15,15h1v1h-1z M17,15h1v1h-1z M19,15h1v1h-1z M20,15h1v1h-1z M21,15h1v1h-1z M22,15h1v1h-1z M25,15h1v1h-1z M27,15h1v1h-1z M30,15h1v1h-1z M34,15h1v1h-1z M35,15h1v1h-1z M36,15h1v1h-1z M37,15h1v1h-1z M38,15h1v1h-1z M41,15h1v1h-1z M44,15h1v1h-1z M6,16h1v1h-1z M7,16h1v1h-1z M9,16h1v1h-1z M10,16h1v1h-1z M12,16h1v1h-1z M13,16h1v1h-1z M14,16h1v1h-1z M16,16h1v1h-1z M20,16h1v1h-1z M21,16h1v1h-1z M25,16h1v1h-1z M27,16h1v1h-1z M28,16h1v1h-1z M31,16h1v1h-1z M33,16h1v1h-1z M35,16h1v1h-1z M36,16h1v1h-1z M38,16h1v1h-1z M41,16h1v1h-1z M42,16h1v1h-1z M44,16h1v1h-1z M5,17h1v1h-1z M9,17h1v1h-1z M12,17h1v1h-1z M19,17h1v1h-1z M20,17h1v1h-1z M21,17h1v1h-1z M22,17h1v1h-1z M23,17h1v1h-1z M25,17h1v1h-1z M31,17h1v1h-1z M32,17h1v1h-1z M37,17h1v1h-1z M39,17h1v1h-1z M40,17h1v1h-1z M41,17h1v1h-1z M44,17h1v1h-1z M4,18h1v1h-1z M10,18h1v1h-1z M12,18h1v1h-1z M14,18h1v1h-1z M15,18h1v1h-1z M19,18h1v1h-1z M22,18h1v1h-1z M23,18h1v1h-1z M24,18h1v1h-1z M25,18h1v1h-1z M27,18h1v1h-1z M28,18h1v1h-1z M30,18h1v1h-1z M34,18h1v1h-1z M36,18h1v1h-1z M37,18h1v1h-1z M39,18h1v1h-1z M43,18h1v1h-1z M4,19h1v1h-1z M5,19h1v1h-1z M8,19h1v1h-1z M9,19h1v1h-1z M11,19h1v1h-1z M13,19h1v1h-1z M14,19h1v1h-1z M21,19h1v1h-1z M23,19h1v1h-1z M24,19h1v1h-1z M27,19h1v1h-1z M28,19h1v1h-1z M30,19h1v1h-1z M32,19h1v1h-1z M38,19h1v1h-1z M39,19h1v1h-1z M4,20h1v1h-1z M5,20h1v1h-1z M6,20h1v1h-1z M9,20h1v1h-1z M10,20h1v1h-1z M12,20h1v1h-1z M13,20h1v1h-1z M14,20h1v1h-1z M16,20h1v1h-1z M18,20h1v1h-1z M21,20h1v1h-1z M24,20h1v1h-1z M25,20h1v1h-1z M27,20h1v1h-1z M28,20h1v1h-1z M29,20h1v1h-1z M30,20h1v1h-1z M32,20h1v1h-1z M33,20h1v1h-1z M36,20h1v1h-1z M37,20h1v1h-1z M39,20h1v1h-1z M42,20h1v1h-1z M43,20h1v1h-1z M44,20h1v1h-1z M7,21h1v1h-1z M8,21h1v1h-1z M11,21h1v1h-1z M16,21h1v1h-1z M17,21h1v1h-1z M20,21h1v1h-1z M22,21h1v1h-1z M23,21h1v1h-1z M25,21h1v1h-1z M29,21h1v1h-1z M30,21h1v1h-1z M32,21h1v1h-1z M34,21h1v1h-1z M36,21h1v1h-1z M38,21h1v1h-1z M39,21h1v1h-1z M40,21h1v1h-1z M41,21h1v1h-1z M44,21h1v1h-1z M6,22h1v1h-1z M7,22h1v1h-1z M10,22h1v1h-1z M12,22h1v1h-1z M14,22h1v1h-1z M20,22h1v1h-1z M22,22h1v1h-1z M23,22h1v1h-1z M24,22h1v1h-1z M26,22h1v1h-1z M28,22h1v1h-1z M29,22h1v1h-1z M31,22h1v1h-1z M32,22h1v1h-1z M34,22h1v1h-1z M36,22h1v1h-1z M38,22h1v1h-1z M40,22h1v1h-1z M41,22h1v1h-1z M42,22h1v1h-1z M4,23h1v1h-1z M9,23h1v1h-1z M11,23h1v1h-1z M12,23h1v1h-1z M13,23h1v1h-1z M17,23h1v1h-1z M19,23h1v1h-1z M20,23h1v1h-1z M21,23h1v1h-1z M23,23h1v1h-1z M24,23h1v1h-1z M25,23h1v1h-1z M26,23h1v1h-1z M30,23h1v1h-1z M32,23h1v1h-1z M35,23h1v1h-1z M36,23h1v1h-1z M40,23h1v1h-1z M41,23h1v1h-1z M4,24h1v1h-1z M7,24h1v1h-1z M9,24h1v1h-1z M10,24h1v1h-1z M11,24h1v1h-1z M12,24h1v1h-1z M13,24h1v1h-1z M14,24h1v1h-1z M17,24h1v1h-1z M20,24h1v1h-1z M21,24h1v1h-1z M25,24h1v1h-1z M26,24h1v1h-1z M30,24h1v1h-1z M31,24h1v1h-1z M34,24h1v1h-1z M37,24h1v1h-1z M40,24h1v1h-1z M43,24h1v1h-1z M4,25h1v1h-1z M5,25h1v1h-1z M7,25h1v1h-1z M8,25h1v1h-1z M9,25h1v1h-1z M11,25h1v1h-1z M12,25h1v1h-1z M16,25h1v1h-1z M17,25h1v1h-1z M19,25h1v1h-1z M22,25h1v1h-1z M23,25h1v1h-1z M25,25h1v1h-1z M27,25h1v1h-1z M32,25h1v1h-1z M33,25h1v1h-1z M36,25h1v1h-1z M37,25h1v1h-1z M38,25h1v1h-1z M40,25h1v1h-1z M43,25h1v1h-1z M44,25h1v1h-1z M4,26h1v1h-1z M7,26h1v1h-1z M10,26h1v1h-1z M12,26h1v1h-1z M13,26h1v1h-1z M16,26h1v1h-1z M18,26h1v1h-1z M20,26h1v1h-1z M21,26h1v1h-1z M22,26h1v1h-1z M24,26h1v1h-1z M25,26h1v1h-1z M26,26h1v1h-1z M28,26h1v1h-1z M31,26h1v1h-1z M33,26h1v1h-1z M36,26h1v1h-1z M41,26h1v1h-1z M42,26h1v1h-1z M5,27h1v1h-1z M6,27h1v1h-1z M8,27h1v1h-1z M11,27h1v1h-1z M12,27h1v1h-1z M13,27h1v1h-1z M15,27h1v1h-1z M16,27h1v1h-1z M23,27h1v1h-1z M25,27h1v1h-1z M27,27h1v1h-1z M28,27h1v1h-1z M30,27h1v1h-1z M31,27h1v1h-1z M34,27h1v1h-1z M36,27h1v1h-1z M37,27h1v1h-1z M40,27h1v1h-1z M43,27h1v1h-1z M5,28h1v1h-1z M6,28h1v1h-1z M10,28h1v1h-1z M12,28h1v1h-1z M13,28h1v1h-1z M16,28h1v1h-1z M20,28h1v1h-1z M22,28h1v1h-1z M23,28h1v1h-1z M24,28h1v1h-1z M25,28h1v1h-1z M26,28h1v1h-1z M29,28h1v1h-1z M30,28h1v1h-1z M31,28h1v1h-1z M33,28h1v1h-1z M40,28h1v1h-1z M41,28h1v1h-1z M42,28h1v1h-1z M43,28h1v1h-1z M4,29h1v1h-1z M6,29h1v1h-1z M11,29h1v1h-1z M14,29h1v1h-1z M15,29h1v1h-1z M16,29h1v1h-1z M17,29h1v1h-1z M18,29h1v1h-1z M19,29h1v1h-1z M21,29h1v1h-1z M22,29h1v1h-1z M23,29h1v1h-1z M24,29h1v1h-1z M25,29h1v1h-1z M26,29h1v1h-1z M27,29h1v1h-1z M29,29h1v1h-1z M32,29h1v1h-1z M33,29h1v1h-1z M35,29h1v1h-1z M37,29h1v1h-1z M39,29h1v1h-1z M40,29h1v1h-1z M41,29h1v1h-1z M44,29h1v1h-1z M5,30h1v1h-1z M6,30h1v1h-1z M7,30h1v1h-1z M9,30h1v1h-1z M10,30h1v1h-1z M11,30h1v1h-1z M15,30h1v1h-1z M17,30h1v1h-1z M18,30h1v1h-1z M20,30h1v1h-1z M22,30h1v1h-1z M23,30h1v1h-1z M26,30h1v1h-1z M30,30h1v1h-1z M31,30h1v1h-1z M32,30h1v1h-1z M34,30h1v1h-1z M36,30h1v1h-1z M37,30h1v1h-1z M39,30h1v1h-1z M40,30h1v1h-1z M43,30h1v1h-1z M4,31h1v1h-1z M5,31h1v1h-1z M6,31h1v1h-1z M7,31h1v1h-1z M9,31h1v1h-1z M13,31h1v1h-1z M16,31h1v1h-1z M17,31h1v1h-1z M18,31h1v1h-1z M19,31h1v1h-1z M21,31h1v1h-1z M23,31h1v1h-1z M24,31h1v1h-1z M25,31h1v1h-1z M28,31h1v1h-1z M29,31h1v1h-1z M30,31h1v1h-1z M31,31h1v1h-1z M32,31h1v1h-1z M34,31h1v1h-1z M35,31h1v1h-1z M36,31h1v1h-1z M39,31h1v1h-1z M41,31h1v1h-1z M43,31h1v1h-1z M5,32h1v1h-1z M6,32h1v1h-1z M8,32h1v1h-1z M10,32h1v1h-1z M12,32h1v1h-1z M13,32h1v1h-1z M16,32h1v1h-1z M17,32h1v1h-1z M18,32h1v1h-1z M19,32h1v1h-1z M21,32h1v1h-1z M26,32h1v1h-1z M28,32h1v1h-1z M29,32h1v1h-1z M31,32h1v1h-1z M32,32h1v1h-1z M35,32h1v1h-1z M37,32h1v1h-1z M41,32h1v1h-1z M42,32h1v1h-1z M43,32h1v1h-1z M4,33h1v1h-1z M6,33h1v1h-1z M9,33h1v1h-1z M11,33h1v1h-1z M12,33h1v1h-1z M13,33h1v1h-1z M14,33h1v1h-1z M16,33h1v1h-1z M17,33h1v1h-1z M18,33h1v1h-1z M19,33h1v1h-1z M21,33h1v1h-1z M22,33h1v1h-1z M28,33h1v1h-1z M30,33h1v1h-1z M31,33h1v1h-1z M34,33h1v1h-1z M36,33h1v1h-1z M39,33h1v1h-1z M40,33h1v1h-1z M41,33h1v1h-1z M42,33h1v1h-1z M43,33h1v1h-1z M4,34h1v1h-1z M6,34h1v1h-1z M10,34h1v1h-1z M11,34h1v1h-1z M12,34h1v1h-1z M13,34h1v1h-1z M15,34h1v1h-1z M18,34h1v1h-1z M19,34h1v1h-1z M20,34h1v1h-1z M24,34h1v1h-1z M26,34h1v1h-1z M30,34h1v1h-1z M31,34h1v1h-1z M32,34h1v1h-1z M34,34h1v1h-1z M35,34h1v1h-1z M37,34h1v1h-1z M38,34h1v1h-1z M39,34h1v1h-1z M42,34h1v1h-1z M4,35h1v1h-1z M7,35h1v1h-1z M8,35h1v1h-1z M15,35h1v1h-1z M17,35h1v1h-1z M19,35h1v1h-1z M20,35h1v1h-1z M21,35h1v1h-1z M23,35h1v1h-1z M25,35h1v1h-1z M28,35h1v1h-1z M29,35h1v1h-1z M30,35h1v1h-1z M31,35h1v1h-1z M35,35h1v1h-1z M36,35h1v1h-1z M37,35h1v1h-1z M38,35h1v1h-1z M40,35h1v1h-1z M41,35h1v1h-1z M43,35h1v1h-1z M4,36h1v1h-1z M6,36h1v1h-1z M8,36h1v1h-1z M9,36h1v1h-1z M10,36h1v1h-1z M11,36h1v1h-1z M14,36h1v1h-1z M15,36h1v1h-1z M21,36h1v1h-1z M23,36h1v1h-1z M25,36h1v1h-1z M29,36h1v1h-1z M31,36h1v1h-1z M33,36h1v1h-1z M35,36h1v1h-1z M36,36h1v1h-1z M37,36h1v1h-1z M38,36h1v1h-1z M39,36h1v1h-1z M40,36h1v1h-1z M42,36h1v1h-1z M43,36h1v1h-1z M44,36h1v1h-1z M12,37h1v1h-1z M13,37h1v1h-1z M15,37h1v1h-1z M18,37h1v1h-1z M20,37h1v1h-1z M23,37h1v1h-1z M26,37h1v1h-1z M28,37h1v1h-1z M32,37h1v1h-1z M33,37h1v1h-1z M35,37h1v1h-1z M36,37h1v1h-1z M40,37h1v1h-1z M41,37h1v1h-1z M43,37h1v1h-1z M44,37h1v1h-1z M4,38h1v1h-1z M5,38h1v1h-1z M6,38h1v1h-1z M7,38h1v1h-1z M8,38h1v1h-1z M9,38h1v1h-1z M10,38h1v1h-1z M13,38h1v1h-1z M14,38h1v1h-1z M16,38h1v1h-1z M17,38h1v1h-1z M20,38h1v1h-1z M21,38h1v1h-1z M22,38h1v1h-1z M23,38h1v1h-1z M25,38h1v1h-1z M26,38h1v1h-1z M28,38h1v1h-1z M30,38h1v1h-1z M31,38h1v1h-1z M33,38h1v1h-1z M35,38h1v1h-1z M36,38h1v1h-1z M38,38h1v1h-1z M40,38h1v1h-1z M41,38h1v1h-1z M42,38h1v1h-1z M4,39h1v1h-1z M10,39h1v1h-1z M13,39h1v1h-1z M15,39h1v1h-1z M17,39h1v1h-1z M18,39h1v1h-1z M22,39h1v1h-1z M30,39h1v1h-1z M31,39h1v1h-1z M32,39h1v1h-1z M33,39h1v1h-1z M34,39h1v1h-1z M35,39h1v1h-1z M36,39h1v1h-1z M40,39h1v1h-1z M43,39h1v1h-1z M4,40h1v1h-1z M6,40h1v1h-1z M7,40h1v1h-1z M8,40h1v1h-1z M10,40h1v1h-1z M12,40h1v1h-1z M13,40h1v1h-1z M14,40h1v1h-1z M18,40h1v1h-1z M19,40h1v1h-1z M20,40h1v1h-1z M21,40h1v1h-1z M22,40h1v1h-1z M23,40h1v1h-1z M25,40h1v1h-1z M28,40h1v1h-1z M30,40h1v1h-1z M31,40h1v1h-1z M32,40h1v1h-1z M36,40h1v1h-1z M37,40h1v1h-1z M38,40h1v1h-1z M39,40h1v1h-1z M40,40h1v1h-1z M42,40h1v1h-1z M43,40h1v1h-1z M44,40h1v1h-1z M4,41h1v1h-1z M6,41h1v1h-1z M7,41h1v1h-1z M8,41h1v1h-1z M10,41h1v1h-1z M12,41h1v1h-1z M15,41h1v1h-1z M19,41h1v1h-1z M21,41h1v1h-1z M22,41h1v1h-1z M23,41h1v1h-1z M24,41h1v1h-1z M29,41h1v1h-1z M32,41h1v1h-1z M34,41h1v1h-1z M37,41h1v1h-1z M39,41h1v1h-1z M41,41h1v1h-1z M42,41h1v1h-1z M44,41h1v1h-1z M4,42h1v1h-1z M6,42h1v1h-1z M7,42h1v1h-1z M8,42h1v1h-1z M10,42h1v1h-1z M12,42h1v1h-1z M13,42h1v1h-1z M15,42h1v1h-1z M19,42h1v1h-1z M21,42h1v1h-1z M23,42h1v1h-1z M27,42h1v1h-1z M28,42h1v1h-1z M29,42h1v1h-1z M30,42h1v1h-1z M31,42h1v1h-1z M32,42h1v1h-1z M33,42h1v1h-1z M35,42h1v1h-1z M37,42h1v1h-1z M38,42h1v1h-1z M39,42h1v1h-1z M40,42h1v1h-1z M41,42h1v1h-1z M43,42h1v1h-1z M4,43h1v1h-1z M10,43h1v1h-1z M14,43h1v1h-1z M15,43h1v1h-1z M16,43h1v1h-1z M18,43h1v1h-1z M20,43h1v1h-1z M22,43h1v1h-1z M23,43h1v1h-1z M28,43h1v1h-1z M32,43h1v1h-1z M38,43h1v1h-1z M40,43h1v1h-1z M43,43h1v1h-1z M4,44h1v1h-1z M5,44h1v1h-1z M6,44h1v1h-1z M7,44h1v1h-1z M8,44h1v1h-1z M9,44h1v1h-1z M10,44h1v1h-1z M13,44h1v1h-1z M15,44h1v1h-1z M16,44h1v1h-1z M18,44h1v1h-1z M21,44h1v1h-1z M23,44h1v1h-1z M24,44h1v1h-1z M26,44h1v1h-1z M27,44h1v1h-1z M33,44h1v1h-1z M35,44h1v1h-1z M38,44h1v1h-1z M39,44h1v1h-1z M40,44h1v1h-1z M41,44h1v1h-1z M42,44h1v1h-1z" fill="#111111"/>
+</svg>
+</div>
+<a class="wechat-save" href="./images/wechat-qr.png" download="GAO-Kexin-WeChat.png">Download QR code</a>
+</div>
+</div>
+<div class="column">
+<div class="profile">
+<div class="bio-draft" data-slot="text-05">
+<!-- Published introduction is present before hydration; keep its text in sync with bio-editor below. -->
+<div id="bio-display" class="bio-display" tabindex="-1">
+<p data-bio-block="body">Hi! I'm GAO Kexin (pronounced <em>kuh-sheen</em>), a computer science undergraduate at <a class="guide-link bio-institution-link" href="https://hkust.edu.hk/" target="_blank" rel="noopener noreferrer">HKUST</a>. I’m currently a UROP student in the <a class="guide-link bio-institution-link" href="https://www.hkpeilab.com/" target="_blank" rel="noopener noreferrer">Pervasive Intelligence Lab</a>, led by <a class="guide-link bio-institution-link" href="https://cse.hkust.edu.hk/~songguo/" target="_blank" rel="noopener noreferrer">Prof. Song Guo</a>.</p>
+<p data-bio-block="body">I’m interested in embodied intelligence: how intelligent systems understand their environments and act within them. I’m currently exploring how to evaluate vision-language-action models and world action models—which capabilities a test measures, and what its results actually establish.</p>
+<p data-bio-block="body">Previously, during an internship at a fundraising advisory firm, I built AI agents to identify embodied-AI startups and match them with investors. I also build tools for my own learning and everyday work, refining them through use.</p>
+<p data-bio-block="body">I built this website to connect with you, so feel free to reach out:)</p>
+<div class="bio-guide-paper" role="group" aria-labelledby="site-guide">
+<h2 id="site-guide" data-bio-block="guide-heading">How to Read This Site</h2>
+<p data-bio-block="guide"><a class="guide-link" href="#mindset" data-section-link>Mindset</a> — how I connect top-down structure with bottom-up understanding, approach problems, and recognize my limits. Take Mindset away, what’s left wouldn’t be me.</p>
+<p data-bio-block="guide"><a class="guide-link" href="#research" data-section-link>Research</a> — my ongoing exploration of how to evaluate VLA models and world action models.</p>
+<p data-bio-block="guide"><a class="guide-link" href="#projects" data-section-link>Projects</a> — tools I built for problems I kept running into, with interactive demos.</p>
+<p data-bio-block="guide"><a class="guide-link" href="#maps" data-section-link>Mind Maps</a> — how I learn: mapping the big picture, connecting ideas, and making gaps in my understanding visible.</p>
+<p data-bio-block="guide"><a class="guide-link" href="#blogs" data-section-link>Blog</a> — a place to think in writing, explore questions, and revisit my views as I learn.</p>
+</div>
+</div>
+<textarea id="bio-editor" class="bio-editor" hidden rows="4" aria-label="编辑自我介绍" aria-describedby="bio-draft-status" placeholder="点击这里，编辑自我介绍…" spellcheck="false">Hi! I'm GAO Kexin (pronounced kuh-sheen), a computer science undergraduate at HKUST. I’m currently a UROP student in the Pervasive Intelligence Lab, led by Prof. Song Guo.
+
+I’m interested in embodied intelligence: how intelligent systems understand their environments and act within them. I’m currently exploring how to evaluate vision-language-action models and world action models—which capabilities a test measures, and what its results actually establish.
+
+Previously, during an internship at a fundraising advisory firm, I built AI agents to identify embodied-AI startups and match them with investors. I also build tools for my own learning and everyday work, refining them through use.
+
+I built this website to connect with you, so feel free to reach out:)
+
+How to Read This Site
+
+Mindset — how I connect top-down structure with bottom-up understanding, approach problems, and recognize my limits. Take Mindset away, what’s left wouldn’t be me.
+
+Research — my ongoing exploration of how to evaluate VLA models and world action models.
+
+Projects — tools I built for problems I kept running into, with interactive demos.
+
+Mind Maps — how I learn: mapping the big picture, connecting ideas, and making gaps in my understanding visible.
+
+Blog — a place to think in writing, explore questions, and revisit my views as I learn.</textarea>
+<div class="bio-tools">
+<span id="bio-draft-status" class="bio-draft-status" role="status" aria-live="polite">修改会保存为当前浏览器的草稿</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+<section aria-labelledby="mindset-title" class="section home-section" id="mindset">
+<hr class="double"/>
+<div class="section-heading">
+<h2 id="mindset-title" data-copy-key="section.mindset.title" tabindex="-1">Mindset</h2>
+<a class="guide-return" href="#site-guide" data-section-link>↑ Site guide</a>
+</div>
+<div class="columns mindset-columns">
+<article class="column is-4 mindset-entry">
+<h3 class="mindset-title" data-copy-key="mindset.learn.title">How I Learn </h3>
+<p data-copy-key="mindset.learn.summary" data-copy-emphasis data-copy-rich><span data-copy-size="18" style="font-size: calc(18px / var(--copy-display-scale, 1)); line-height: var(--copy-base-leading, 1.5); white-space: pre-wrap;">I learn a new field </span><em><span data-copy-size="18" style="font-size: calc(18px / var(--copy-display-scale, 1)); line-height: var(--copy-base-leading, 1.5); white-space: pre-wrap;">top-down</span></em><span data-copy-size="18" style="font-size: calc(18px / var(--copy-display-scale, 1)); line-height: var(--copy-base-leading, 1.5); white-space: pre-wrap;"> and understand it </span><em><span data-copy-size="18" style="font-size: calc(18px / var(--copy-display-scale, 1)); line-height: var(--copy-base-leading, 1.5); white-space: pre-wrap;">bottom-up</span></em><span data-copy-size="18" style="font-size: calc(18px / var(--copy-display-scale, 1)); line-height: var(--copy-base-leading, 1.5); white-space: pre-wrap;">: I map the field first, then trace each idea back to the problem that made it necessary.</span></p>
+</article>
+<hr class="is-mobile"/>
+<article class="column is-4 mindset-entry">
+<h3 class="mindset-title" data-copy-key="mindset.approach.title">How I Approach Problems</h3>
+<p data-copy-key="mindset.approach.summary">I start from what a useful answer would look like and what would count as evidence for it, then rebuild from first principles.</p>
+</article>
+<hr class="is-mobile"/>
+<article class="column is-4 mindset-entry">
+<h3 class="mindset-title" data-copy-key="mindset.limits.title">My Limits</h3>
+<p data-copy-key="mindset.limits.summary">I can wait too long for a complete framework, or simplify away real difficulties in pursuit of an elegant solution. I need more hands-on research experience to test my assumptions.</p>
+</article>
+</div>
+<div class="mindset-overview-action"><button type="button" class="section-open" data-section-open="mindset" aria-controls="mindset-detail">Read more</button></div>
+<article class="mindset-taste" aria-labelledby="mindset-taste-title">
+<h3 id="mindset-taste-title" class="mindset-title" data-copy-key="mindset.taste.title">On Taste</h3>
+<p data-copy-key="mindset.taste.teaser">I wrote a blog about my thoughts on taste.</p>
+<div class="mindset-overview-action"><a class="section-open" href="#taste-blog" data-section-link data-section-open="blogs" aria-controls="taste-blog-detail">Read article</a></div>
+</article>
+<div class="section-mobile-detail" data-section-mobile-detail="mindset" hidden></div>
+<p class="section-copy-status" data-section-copy-status></p>
+</section>
+<section aria-labelledby="research-title" class="section home-section" id="research">
+<hr class="double"/>
+<div class="section-heading">
+<h2 id="research-title" data-copy-key="section.research.title" tabindex="-1">Research</h2>
+<a class="guide-return" href="#site-guide" data-section-link>↑ Site guide</a>
+</div>
+<article class="research-entry research-loop-entry">
+<figure class="research-cover-figure">
+<button type="button" class="research-loop-cover" data-section-open="research" aria-controls="research-detail" aria-label="Read about evaluation dimensions for VLAs and world action models">
+<svg class="research-diagram" viewBox="10 10 870 390" role="img" aria-labelledby="loop-overview-title"><title id="loop-overview-title">The perception–action loop, with external evaluation recorded separately</title><use href="#research-loop" width="900" height="390"/></svg>
+</button>
+</figure>
+<div class="research-summary">
+<h3 class="research-title" data-copy-key="research.dimensions.title" data-preserve-title-case>A Survey: Evaluation Dimensions for VLAs and World Action Models (In Progress)</h3>
+<p data-copy-key="research.dimensions.overview">I’m exploring evaluation dimensions for VLAs and world action models: which capabilities matter, how failures differ, and what experiments can establish beyond a single task success rate.</p>
+</div>
+</article>
+<div class="mindset-overview-action"><button type="button" class="section-open" data-section-open="research" aria-controls="research-detail">Read more</button></div>
+<div class="section-mobile-detail" data-section-mobile-detail="research" hidden></div>
+<p class="section-copy-status" data-section-copy-status></p>
+</section>
+<section aria-labelledby="projects-title" class="section home-section" id="projects">
+<hr class="double"/>
+<div class="section-heading">
+<h2 id="projects-title" data-copy-key="section.projects.title" tabindex="-1">Projects</h2>
+<a class="guide-return" href="#site-guide" data-section-link>↑ Site guide</a>
+</div>
+<div id="project-track" class="project-track" role="region" aria-label="Projects, scroll horizontally" tabindex="0">
+<article class="project-card" aria-label="Project 1, Mindmap">
+<button class="project-image-button" type="button" data-project-open="mindmap" aria-label="View project: Kexin’s Mindmap" aria-controls="mindmap-project-detail">
+<img class="project-cover" draggable="false" src="./images/mindmap-project.png" alt="Mindmap: a clean tree of outlined nodes, curved branches and relationship arrows" width="1600" height="672" loading="lazy" decoding="async"/>
+</button>
+<h3 data-project-text="mindmap.title">Kexin's Mindmap</h3>
+<p data-project-text="mindmap.card">I was paying 700+ CNY for XMind every year. Then I built my own, to my taste and my workflow, polished by the pickiest user I know: myself. Hundreds of maps later, it’s still the first thing I open when I need to think.</p>
+<div class="project-card-links">
+<button type="button" data-project-open="mindmap" data-project-open-label aria-controls="mindmap-project-detail">View project</button>
+</div>
+</article>
+<article class="project-card" aria-label="Project 2, ADHD Reader">
+<button class="project-image-button" type="button" data-project-open="adhd" aria-label="View project: ADHD Reader" aria-controls="adhd-project-detail">
+<img class="project-cover" draggable="false" src="./images/adhd-reader-project.png?v=abstract-focus" alt="OpenVLA abstract with the current reading line in black and surrounding text dimmed" width="1312" height="616" loading="lazy"/>
+</button>
+<h3 data-project-text="adhd.title">ADHD Reader</h3>
+<p data-project-text="adhd.note">Reading the same paragraph for the third time felt like a feature nobody had asked for. So I built a reader that locks onto one line at a time and keeps me there. The paper is still hard, but at least now I’m the one reading it.
+</p>
+<div class="project-card-links"><button type="button" data-project-open="adhd" data-project-open-label aria-controls="adhd-project-detail">View project</button></div>
+</article>
+<article class="project-card" aria-label="Project 3, To-do">
+<button type="button" class="project-image-button" data-project-open="todo" aria-label="View project: Kexin’s To-Do">
+<img class="project-cover" draggable="false" src="./images/todo-project.svg?v=rich-rainbow" alt="To-do with a Watching list and colored topic columns" width="1600" height="672" loading="lazy"/>
+</button>
+<h3 data-project-text="todo.title">Kexin's To-Do</h3>
+<p data-project-text="todo.note">I kept losing the thought I was about to write down. So I built a small to-do window that lives on my desktop and outsourced my prefrontal cortex to it. Life got a lot easier.
+</p>
+<div class="project-card-links"><button type="button" data-project-open="todo" data-project-open-label>View project</button></div>
+</article>
+</div>
+<p class="project-copy-status" data-project-draft-status role="status">Click the text to edit · drafts save in this browser</p>
+<div id="project-mobile-detail" class="project-mobile-detail" hidden></div>
+</section>
+<section aria-labelledby="maps-title" class="section home-section" id="maps">
+<hr class="double"/>
+<div class="section-heading">
+<h2 id="maps-title" data-copy-key="section.maps.title" tabindex="-1">Mind Maps</h2>
+<a class="guide-return" href="#site-guide" data-section-link>↑ Site guide</a>
+</div>
+<article class="map-feature">
+<a class="map-preview" href="./maps/Research-Map-EN.html" target="_blank" rel="noopener" aria-label="Open full map: AI Map (opens in a new tab)">
+<svg class="map-thumbnail" role="img" aria-label="Six foundational AI capabilities branching from general adaptive intelligence" xmlns="http://www.w3.org/2000/svg" width="1000" height="580" viewBox="0 0 1000 580"><rect width="1000" height="580" fill="#fff"/><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M1 1 9 5 1 9" fill="none" stroke="#171717" stroke-width="1.2"/></marker></defs><g fill="none" stroke="#171717" stroke-width="1.6" marker-end="url(#arrow)"><path d="M330 290L490 65"/><path d="M330 290L490 155"/><path d="M330 290L490 245"/><path d="M330 290L490 335"/><path d="M330 290L490 425"/><path d="M330 290L490 515"/></g><g fill="white" stroke="#171717" stroke-width="1.6"><rect x="40" y="228" width="290" height="124"/><rect x="500" y="27" width="455" height="76"/><rect x="500" y="117" width="455" height="76"/><rect x="500" y="207" width="455" height="76"/><rect x="500" y="297" width="455" height="76"/><rect x="500" y="387" width="455" height="76"/><rect x="500" y="477" width="455" height="76"/></g><g fill="#171717" font-family="inherit" font-size="29" text-anchor="middle"><text x="185" y="280">General adaptive<tspan x="185" dy="36">intelligence</tspan></text><text x="727.5" y="75"><tspan x="727.5" dy="0">Perception &amp; grounding</tspan></text><text x="727.5" y="165"><tspan x="727.5" dy="0">Modeling &amp; memory</tspan></text><text x="727.5" y="255"><tspan x="727.5" dy="0">Learning &amp; generalization</tspan></text><text x="727.5" y="328"><tspan x="727.5" dy="0">Reasoning, planning</tspan><tspan x="727.5" dy="32">&amp; decision</tspan></text><text x="727.5" y="435"><tspan x="727.5" dy="0">Action &amp; interaction</tspan></text><text x="727.5" y="525"><tspan x="727.5" dy="0">Evaluation &amp; self-regulation</tspan></text></g></svg>
+</a>
+<div class="map-feature-copy">
+<h3 class="mindset-title" data-copy-key="maps.research.title">AI Map</h3>
+<p data-copy-key="maps.research.summary">My way of finding a path through AI: start with a capability, follow the problem that limits it, and see how different approaches respond.</p>
+<p data-copy-key="maps.research.description">The map connects technical ideas with their motivations, mechanisms, limits, and sources. You can explore the overview, follow an evolution path, or search for a particular idea.</p>
+</div>
+</article>
+<div class="mindset-overview-action"><a class="section-open" href="./maps/Research-Map-EN.html" target="_blank" rel="noopener" aria-label="Open full map: AI Map (opens in a new tab)">Open full map</a></div>
+<div class="course-notes reading-list">
+<article class="reading-row">
+<h3 data-copy-key="notes.nlp.title">Natural Language Processing Notes </h3>
+<a class="reading-action" href="https://github.com/julyseaweed/HKUST-COMP4221-Natural-Language-Processing-Minsmaps" target="_blank" rel="noopener" aria-label="View notes: Natural Language Processing Notes">View notes</a>
+</article>
+<article class="reading-row">
+<h3 data-copy-key="notes.ml.title">Machine Learning Notes (Not Complete)</h3>
+<a class="reading-action" href="https://github.com/julyseaweed/HKUST-COMP4211-Machine-Learning-Mindmaps" target="_blank" rel="noopener" aria-label="View notes: Machine Learning Notes">View notes</a>
+</article>
+</div>
+<div class="section-mobile-detail" data-section-mobile-detail="maps" hidden></div>
+<p class="section-copy-status" data-section-copy-status></p>
+</section>
+<section aria-labelledby="blogs-title" class="section home-section" id="blogs">
+<hr class="double"/>
+<div class="section-heading">
+<h2 id="blogs-title" data-copy-key="section.blogs.title" tabindex="-1">Blog</h2>
+<a class="guide-return" href="#site-guide" data-section-link>↑ Site guide</a>
+</div>
+
+<div class="reading-list blog-list">
+<article id="taste-blog" class="reading-row">
+<h3 data-copy-key="blog.taste.research-beauty.title">The Beauty I Look for in Research</h3>
+<button type="button" class="reading-action" data-section-open="blogs" aria-controls="taste-blog-detail">Read article</button>
+</article>
+<article class="reading-row">
+<h3 data-copy-key="blog.second.title" data-preserve-title-case>What I Got Wrong about the Primary Market</h3>
+<button type="button" class="reading-action" data-section-open="blogs" aria-controls="blog-second-detail">Read article</button>
+</article>
+</div>
+<div class="section-mobile-detail" data-section-mobile-detail="blogs" hidden></div>
+<p class="section-copy-status" data-section-copy-status></p>
+</section>
+</main>
+</div>
+</section>
+<aside aria-label="右侧预留内容区域" class="split-panel split-panel-right">
+<article id="mindmap-project-detail" class="project-detail" tabindex="-1" aria-labelledby="mindmap-detail-title" hidden>
+<div class="project-detail-top">
+<button id="project-close" class="project-close" type="button">Close ×</button>
+</div>
+<h2 id="mindmap-detail-title" data-project-text="mindmap.title">Kexin's Mindmap</h2>
+<p data-project-text="mindmap.story">I’m a heavy mind-map user. I build the big picture one branch at a time, and every branch is a small win, so I’m completely hooked. That loop is the whole point, so the app is built to keep it fast: I can add branches without leaving the keyboard. And because a map is only useful if it feeds the rest of my learning, maps stay on my machine and export to PDF and Markdown.</p>
+<div class="project-demo-heading">
+<h3 data-project-text="mindmap.demoTitle" data-preserve-title-case>Interactive demo</h3>
+<a href="https://github.com/julyseaweed/Mindmap" target="_blank" rel="noopener noreferrer">GitHub</a>
+</div>
+<p class="project-demo-version" data-project-text="mindmap.versionNote">Simplified browser version</p>
+<p class="project-demo-hint" data-project-text="mindmap.hint">Select a node. Enter adds a sibling; Tab adds a child. Double-click to edit. Backspace to delete. You can also use the buttons below.</p>
+<iframe id="mindmap-demo-frame" class="project-demo-frame" title="Interactive Mindmap editor" data-src="./demos/mindmap.html" loading="lazy"></iframe>
+<p class="project-copy-status" data-project-draft-status role="status">Click the text to edit · drafts save in this browser</p>
+</article>
+<article id="adhd-project-detail" class="project-detail" tabindex="-1" aria-labelledby="adhd-detail-title" hidden>
+<div class="project-detail-top"><button class="project-close" type="button">Close ×</button></div>
+<h2 id="adhd-detail-title" data-project-text="adhd.title">ADHD Reader</h2>
+<p data-project-text="adhd.story">I wanted a reader that helps me stay with the text without taking away the rest of the page. Click a line to move the guide, or use the arrow keys to keep reading. Select text to highlight, underline, comment, or look up a word. Annotations save back into the PDF, so I can open them in other PDF readers too. There is a Chrome version for everyday reading and a companion add-on for Zotero.</p>
+<div class="project-demo-heading"><h3 data-project-text="adhd.demoTitle" data-preserve-title-case>Interactive demo</h3><div class="reader-source-links"><a href="https://github.com/julyseaweed/adhd-reader-chrome" target="_blank" rel="noopener noreferrer">GitHub · Chrome</a><a href="https://github.com/julyseaweed/adhd-reader-zotero" target="_blank" rel="noopener noreferrer">GitHub · Zotero</a></div></div>
+<p class="project-demo-version" data-project-text="adhd.versionNote">Simplified browser version</p>
+<p class="project-demo-hint" data-project-text="adhd.hint">Click a line, then use ↑, ↓ or Enter to follow the text. Select words to annotate. </p>
+<iframe id="adhd-demo-frame" class="project-demo-frame reader-demo-frame" title="Interactive ADHD Reader" loading="lazy"></iframe>
+<p class="project-copy-status" data-project-draft-status role="status"></p>
+</article>
+<article id="todo-project-detail" class="project-detail" tabindex="-1" aria-labelledby="todo-detail-title" hidden>
+<div class="project-detail-top"><button class="project-close" type="button">Close ×</button></div>
+<h2 id="todo-detail-title" data-project-text="todo.title">Kexin's To-Do</h2>
+<p data-project-text="todo.story">Tasks live in colored topic columns, and links get their own Watching list. It’s a Windows app that saves everything as local Markdown and can collapse to a floating circle when it’s in the way.
+</p>
+<div class="project-demo-heading">
+<h3 data-project-text="todo.demoTitle" data-preserve-title-case>Interactive demo</h3>
+<div class="reader-source-links">
+<a href="https://github.com/julyseaweed/To-do" target="_blank" rel="noopener noreferrer">GitHub</a>
+</div>
+</div>
+<p class="project-demo-version" data-project-text="todo.versionNote">Simplified browser version</p>
+<p class="project-demo-hint" data-project-text="todo.hint">Type in a card and press Enter for another. Click the circle to complete it or drag its handle to move it. Scroll sideways to see more topics.</p>
+<iframe id="todo-demo-frame" class="project-demo-frame" title="Interactive To-do list" loading="lazy"></iframe>
+<p class="project-copy-status" data-project-draft-status role="status"></p>
+</article>
+<article id="mindset-detail" class="section-detail" data-section-detail="mindset" tabindex="-1" aria-labelledby="mindset-detail-title" hidden>
+<div class="section-detail-top"><button class="section-close" type="button" data-section-close>Close ×</button></div>
+<h2 id="mindset-detail-title" data-copy-key="section.mindset.title">Mindset</h2>
+<div class="detail-part" data-detail-part="learn">
+<h3 data-copy-key="mindset.learn.title">How I Learn </h3>
+<p data-copy-key="mindset.learn.p1" data-copy-emphasis data-copy-rich>I learn a new field <em>top-down</em> and understand it <em>bottom-up</em>. Top-down, I map the field first: what questions it is trying to answer, what its main parts are, and how they depend on each other. Bottom-up, I take each idea back to first principles: the problem that made it necessary, where earlier approaches fell short, and what the new mechanism changes.</p>
+<p data-copy-key="mindset.learn.p2">Drawing is how I do this. A mind map makes me decide which ideas belong together, which sit at different levels, and which links I still can’t explain.</p>
+<a class="detail-link" href="#maps" data-section-link>Mind Maps</a>
+</div>
+<div class="detail-part" data-detail-part="approach">
+<h3 data-copy-key="mindset.approach.title">How I Approach Problems</h3>
+<p data-copy-key="mindset.approach.p1">I work on problems the same way. Top-down, I start from what a useful answer would look like and what would count as evidence for it. Bottom-up, I return to first principles: the goal, the constraints, and the assumptions underneath. What do we actually know, and what are we only taking for granted? That decides which solutions seem possible at all, so I rebuild the reasoning from there and check that it holds.</p>
+<p data-copy-key="mindset.approach.research">My current survey asks which capabilities VLA models and world action models should be evaluated on, and how to distinguish them experimentally. It gives me a top-down way to frame the questions. Next, I want to work bottom-up on one of them in a real system. </p>
+<a class="detail-link" href="#research" data-section-link>Research</a>
+</div>
+<div class="detail-part" data-detail-part="reflect">
+<h3 data-copy-key="mindset.limits.title">My Limits</h3>
+<p data-copy-key="mindset.limits.p1" data-copy-emphasis data-copy-rich>My <em>top-down</em> approach can make me reluctant to begin before I have a coherent picture. I can spend too long refining a framework when working through one concrete case would teach me more. In trying to make the structure clear, I may also draw distinctions too neatly and miss relationships that only become apparent in practice.</p>
+<p data-copy-key="mindset.limits.p2">I am drawn to elegant solutions, and I need to watch how that preference shapes my assumptions. Making a formulation cleaner can also remove a constraint or difficulty that matters in practice. I want to learn to distinguish simplifications that reveal a problem’s essential structure from those that quietly change the problem. That means asking what each assumption leaves out and testing how the solution behaves when it no longer holds.</p>
+<p data-copy-key="mindset.limits.p3" data-copy-emphasis data-copy-rich>My hands-on research experience is still limited, particularly in embodied intelligence. My current survey gives me a <em>top-down</em> way to frame questions about evaluating VLAs and world action models. I now want to take one of those questions into a focused research project: work through implementation choices, design experiments, and investigate what the results actually establish. Through that <em>bottom-up</em> experience, I hope to develop better judgment about which distinctions matter—and learn to make progress while parts of the picture remain unclear.</p>
+</div>
+
+<p class="section-copy-status" data-section-copy-status></p>
+</article>
+<article id="research-detail" class="section-detail" data-section-detail="research" tabindex="-1" aria-labelledby="research-detail-title" hidden>
+<div class="section-detail-top"><button class="section-close" type="button" data-section-close>Close ×</button></div>
+<h2 id="research-detail-title" data-copy-key="research.dimensions.title" data-preserve-title-case>A Survey: Evaluation Dimensions for VLAs and World Action Models (In Progress)</h2>
+<p data-copy-key="research.dimensions.intro">Which capabilities should we evaluate, and what would make a test informative about them? I’m working toward a survey of evaluation dimensions for vision-language-action models (VLAs) and world action models (WAMs), tracing how model mechanisms, capability claims, and experimental evidence fit together.</p>
+<h3 data-copy-key="research.dimensions.approachTitle">How I’m Deriving the Dimensions</h3>
+<p data-copy-key="research.dimensions.approach">I start with the embodied task loop: understand a goal and the current state, choose and execute actions, observe what changed, then continue or recover. This gives me a place to look for capabilities that can fail separately. I then trace two kinds of change in the literature: new mechanisms introduced to address an earlier bottleneck, and new evaluations introduced because an existing test left something unresolved.</p>
+<p data-copy-key="research.dimensions.method2">For each proposed dimension, I ask what distinction it makes possible and what experiment could test that distinction. The structure is provisional: comparisons between papers should determine which dimensions deserve to remain separate, which overlap, and which are missing.</p>
+<h3 data-copy-key="research.dimensions.questionsTitle">Three Questions Guiding the Survey</h3>
+<dl class="research-questions">
+<dt data-copy-key="research.dimensions.skillsTitle" data-copy-rich><span data-copy-size="22" style="font-weight: 400; font-size: calc(22px / var(--copy-display-scale, 1)); line-height: var(--copy-base-leading, 1.5); white-space: pre-wrap;">When a Long Task Fails, What Failed?</span></dt>
+<dd data-copy-key="research.dimensions.skills">A failed sequence can reflect weak individual skills, difficulty composing them, lost task progress, or poor recovery. I’m looking at what controls are needed to distinguish these explanations: testing component skills, matching task difficulty, and recording where execution goes off track.</dd>
+<dt data-copy-key="research.dimensions.generalizationTitle" data-copy-rich><span data-copy-size="22" style="font-weight: 400; font-size: calc(22px / var(--copy-display-scale, 1)); line-height: var(--copy-base-leading, 1.5); white-space: pre-wrap;">What Changed, and Which Capability Did It Test?</span></dt>
+<dd data-copy-key="research.dimensions.generalization">“Unseen” can mean a different instruction, camera, object arrangement, task structure, or robot. I want to keep the capability being evaluated separate from the conditions under which it is tested. For example, unchanged performance after paraphrasing an instruction could indicate robust language use—or little use of language at all. Changing the requested goal provides a different kind of evidence.</dd>
+<dt data-copy-key="research.dimensions.predictionTitle" data-copy-rich><span data-copy-size="22" style="font-weight: 400; font-size: calc(22px / var(--copy-display-scale, 1)); line-height: var(--copy-base-leading, 1.5); white-space: pre-wrap;">What Does Predicting the Future Contribute to Action?</span></dt>
+<dd data-copy-key="research.dimensions.prediction">For WAMs, I distinguish prediction quality, benefits from a prediction objective during training, use of predicted information in action generation, and its effect on decisions during execution. Removing or perturbing that information, with appropriate data and compute controls, can help test the stronger claims. Latency, control frequency, and safety also shape the practical value of any gain.</dd>
+</dl>
+<h3 data-copy-key="research.dimensions.recordTitle">What I Record for Each Evaluation</h3>
+<p data-copy-key="research.dimensions.structure">I use five questions to keep the analysis explicit: what capability is being tested; under which conditions; with what probe or comparison; what was directly observed; and how far the result supports the claim. This connects a proposed dimension to an experiment that could support, challenge, or refine it.</p>
+<div class="research-progress">
+<p><strong data-copy-key="research.dimensions.statusLabel">Status:</strong> <span data-copy-key="research.dimensions.status">Early-stage survey. I have a literature pool, research questions, and a working structure; systematic reading and evidence checks are ongoing.</span></p>
+<p><strong data-copy-key="research.dimensions.nextLabel">Next:</strong> <span data-copy-key="research.dimensions.next">Compare the experimental evidence and refine the scope, then take one focused question into a hands-on project.</span></p>
+</div>
+<p class="section-copy-status" data-section-copy-status></p>
+</article>
+<article id="maps-detail" class="section-detail" data-section-detail="maps" tabindex="-1" aria-labelledby="maps-detail-title" hidden>
+<div class="section-detail-top"><button class="section-close" type="button" data-section-close>Close ×</button><a class="detail-link" href="./maps/Research-Map-EN.html" target="_blank" rel="noopener">Open full map</a></div>
+<h2 id="maps-detail-title" data-copy-key="maps.research.title">AI Map</h2>
+<p data-copy-key="maps.research.hint">Choose a capability or an evolution path to begin. Drag to explore, use the zoom controls, and select a node to read its context and sources.</p>
+<iframe id="research-map-frame" class="research-map-frame" title="Interactive AI Map" data-lazy-src="./maps/Research-Map-EN.html?embedded=1" allow="fullscreen"></iframe>
+<p class="section-copy-status" data-section-copy-status></p>
+</article>
+<article id="taste-blog-detail" class="section-detail" data-section-detail="blogs" tabindex="-1" aria-labelledby="taste-blog-title" hidden>
+<div class="section-detail-top"><button class="section-close" type="button" data-section-close>Close ×</button></div>
+<h2 id="taste-blog-title" data-copy-key="blog.taste.research-beauty.title">The Beauty I Look for in Research</h2>
+<p class="article-subtitle" data-copy-key="blog.taste.research-beauty.subtitle">Some early thoughts on research taste</p>
+<div class="article-body" data-copy-article data-copy-rich data-preserve-title-case data-copy-key="blog.taste.research-beauty.body" aria-label="Taste article">
+<p>Saining Xie’s interview and his talk, <em>Research as an Infinite Game</em>, recently prompted me to think more carefully about the kind of research I hope to do. My research experience is still limited, so these reflections come largely from reading, observation, and my first attempts at doing research. I want to record what draws me to certain questions and explanations, while leaving room for experience to change my mind.</p>
+<p>I currently think of research taste as a form of judgment that develops through practice: which problems deserve attention, which assumptions need examining, what a result adds to our understanding, and what evidence would justify a conclusion. A sense of beauty plays a part in these judgments for me.</p>
+<h3>Why structure matters to me</h3>
+<p>When I begin learning about a field, I tend to look for its overall structure. I want to know why a concept was introduced, what problem it addresses, and how it relates to the concepts around it. Once I understand what a method does, I usually want to ask why it is needed. Which choices follow from the problem, and which have been inherited from a particular implementation?</p>
+<p>I enjoy making mind maps, and I often return to their categories and levels. If the same level mixes research goals, training methods, and model architectures, I feel that the underlying distinctions are still unclear, however tidy the diagram looks. I want a map to reveal relationships, give new ideas a place, and make gaps in my understanding visible.</p>
+<p>I can be exacting about structure and detail. I find it hard to leave a conceptual gap unexamined: a blurred distinction, a missing step in an explanation, or a component whose purpose I cannot account for will keep drawing me back. This makes me particularly receptive to work with a clear structure and well-motivated choices.</p>
+<p>I especially enjoy the moment when separate ideas begin to form a coherent whole. Phenomena I once had to remember separately become consequences of the same principle. Rephrasing a difficult problem reveals its essential relationships. The steps in a design become understandable in terms of the constraints it faces. There is a distinctly aesthetic satisfaction in these moments.</p>
+<h3>What I find beautiful in research</h3>
+<p>In his discussion of mathematical creation, Poincaré associates mathematical beauty with a structure that allows the mind to grasp the whole while still appreciating its details. I find this description helpful. It gives me a more precise way to explain why a framework or an explanation can feel so satisfying. <sup><a href="#taste-reference-1">[1]</a></sup></p>
+<p>One kind of beauty I value is explanatory unity. Bringing apparently different methods into a common framework can help us identify which differences matter and what questions to ask next. Such a framework needs to preserve meaningful distinctions and make something clearer. Arranging everything in a single diagram is only a beginning.</p>
+<p>I also find beauty in a design whose choices can be explained. I want to see how the formulation of a problem, the method used to address it, and the evidence offered for it fit together. Why use this representation? What makes this component necessary? Which experiment would support the proposed explanation? A result that clarifies these relationships gives me something worth pursuing.</p>
+<p>I am drawn to simplicity as well. In <em>Taste for Makers</em>, Paul Graham connects simplicity with solving the right problem. <sup><a href="#taste-reference-2">[2]</a></sup> I want to learn to judge simplicity in relation to specific goals and constraints. A shorter equation or fewer modules does not, by itself, indicate deeper understanding. Complexity may have moved into data processing, the training procedure, or assumptions left unstated.</p>
+<p>When I examine a method, I therefore want to understand what necessary work each part performs. Some complexity can disappear as our understanding improves; some comes from the problem itself. Learning to distinguish the two is part of the judgment I hope to develop.</p>
+<h3>Putting my preferences to the test</h3>
+<p>This desire for order can also get in my way. I tend to want a complete framework before working through a particular problem. Yet some relationships only become visible through trying things. Demanding coherence too early could delay the first imperfect experiment, or lead me to spend too much time organizing what I already know.</p>
+<p>The same risk appears in making mind maps. In trying to keep categories tidy, I may underestimate the real overlap between concepts. A more faithful representation may require several axes of classification or complementary views. I need to let the structure of the subject change the form in which I prefer to represent it.</p>
+<p>In <em>You and Your Research</em>, Hamming emphasizes the importance of tolerating ambiguity: having enough confidence in an idea to continue working, while remaining alert to where it does not fit. <sup><a href="#taste-reference-3">[3]</a></sup> This is something I want to practice: making my current assumptions explicit, allowing them to be incomplete, and doing the work that will inform the next judgment.</p>
+<p>Aesthetic appeal can also make an explanation feel more convincing than its evidence warrants. A simple, unified account will attract my attention, but its validity still needs to be examined through reasoning, experiments, or counterexamples. I want my preferences to sustain careful inquiry and remain open to results that change my expectations.</p>
+<p>In <em>What Is Good Mathematics?</em>, Terence Tao treats mathematical quality as multidimensional and warns that overly fixed standards can cause us to overlook valuable progress. <sup><a href="#taste-reference-4">[4]</a></sup> This is a useful reminder for me. Alongside explanation and simplicity, I need to appreciate the contributions of reliable data, carefully built systems, informative failure analyses, and solutions to practical problems.</p>
+<p>Having a preference for a particular research style does not require making it a universal measure of everyone’s work. I would like to be able to explain my own choices while taking seriously work that did not initially appeal to me.</p>
+<h3>Developing judgment over time</h3>
+<p>In the education section of <em>Research as an Infinite Game</em>, Saining Xie discusses continued learning, asking meaningful questions, challenging assumptions, and learning to live with ambiguity, failure, and revision. These abilities give me a more concrete sense of what it could mean to keep doing research over time. <sup><a href="#taste-reference-5">[5]</a></sup></p>
+<p>Completing projects, receiving feedback, and having my work understood and recognized matter to me. I also want to ask what each project leaves behind: a better ability to formulate problems, an assumption I had previously overlooked, an experiment that better distinguishes competing explanations, or an understanding that someone else can build on.</p>
+<p>I hope to develop research taste through this kind of practice. When I admire a paper, I want to be able to say what I admire about it. When a method seems complicated, I want to understand the constraints it faces. When an idea seems elegant, I want to look for the conditions most likely to expose its weaknesses. Doing these things should gradually help me learn which intuitions to retain and which to revise.</p>
+<p>For now, I want to keep my attachment to structure, detail, and elegant solutions, while learning to work before everything is understood. I hope these preferences will gradually become clearly formulated questions, well-motivated methods, and explanations that withstand scrutiny. The search for beauty is one reason I want to keep trying to understand.</p>
+<h3>References and further reading</h3>
+<ol class="article-references">
+<li id="taste-reference-1"><strong>Henri Poincaré.</strong> <em>Science and Method</em>, Book I, Chapter III, “Mathematical Creation.” Originally published in 1908; the linked text is the 1913 authorized English translation collected in <em>The Foundations of Science</em>. See printed pages 390–392. <a href="https://www.gutenberg.org/files/39713/39713-h/39713-h.htm" rel="noopener noreferrer" target="_blank">Full text</a></li>
+<li id="taste-reference-2"><strong>Paul Graham.</strong> <em>Taste for Makers</em>. 2002. <a href="https://www.paulgraham.com/taste.html" rel="noopener noreferrer" target="_blank">Full text</a></li>
+<li id="taste-reference-3"><strong>Richard Hamming.</strong> <em>You and Your Research</em>. Transcript of the Bellcore talk delivered on March 7, 1986. <a href="https://www.cs.virginia.edu/~robins/YouAndYourResearch.html" rel="noopener noreferrer" target="_blank">Transcript</a></li>
+<li id="taste-reference-4"><strong>Terence Tao.</strong> <em>What Is Good Mathematics?</em> 2007. See the first three PDF pages for the discussion of mathematical quality and the risks of fixed standards. <a href="https://arxiv.org/abs/math/0702396" rel="noopener noreferrer" target="_blank">Paper (arXiv)</a></li>
+<li id="taste-reference-5"><strong>Saining Xie.</strong> <em>Research as an Infinite Game</em>. CVPR workshop, June 11, 2025. <a href="https://sites.google.com/view/standoutcv/schedule" rel="noopener noreferrer" target="_blank">Official schedule</a> · <a href="https://www.canva.com/design/DAGp0iRLk9g/8QLkIDov8ez1q6VvO8nnpQ/edit" rel="noopener noreferrer" target="_blank">Original slides</a> · <a href="https://developer.cloud.tencent.com/article/2531846" rel="noopener noreferrer" target="_blank">Reproduced slides</a> (Chinese article)</li>
+<li id="taste-reference-6"><strong>Xiaojun Zhang’s interview with Saining Xie</strong>, episode 133, published March 16, 2026. The official research taste chapter begins at 02:43:55. <a href="https://www.xiaoyuzhoufm.com/episode/69b77577f8b8079bfa8eb837" rel="noopener noreferrer" target="_blank">Podcast episode</a></li>
+</ol>
+</div>
+<p class="section-copy-status" data-section-copy-status></p>
+</article>
+<article id="blog-second-detail" class="section-detail" data-section-detail="blogs" tabindex="-1" aria-labelledby="blog-second-title" hidden>
+<div class="section-detail-top"><button class="section-close" type="button" data-section-close>Close ×</button></div>
+<h2 id="blog-second-title" data-copy-key="blog.second.title" data-preserve-title-case>What I Got Wrong about the Primary Market</h2>
+<div class="section-copy-blank article-body" data-copy-article data-copy-key="blog.second.body" data-placeholder="Start writing…" aria-label="Second article body" data-copy-rich data-preserve-title-case><p>Before I worked in the primary market, I had two stereotypes about it. Finance, I assumed, moves money around without making anything. And venture investors were people who didn’t really follow the technology and mostly bought stories.</p>
+
+<p>Then I interned at a fundraising advisory firm, finding promising startups and matching them with investors. I now think both stereotypes were wrong.</p>
+
+<h3>It’s closer to the frontier than I expected</h3>
+
+<p>There’s a Chinese saying that the duck is the first to know when the spring river warms: whoever is in the water feels the change first. The primary market is in the water. New technical directions often show up in pitch decks and investor conversations before they become consensus, so it works as a window onto where a field is heading, not just a place that handles money.</p>
+
+<p>The investors I met also knew more than I had assumed. Some had a sense of technical direction that was sharper than that of people working inside the field. My guess is that it comes from position: they see many companies across a space, so they are stepping back by default, while people inside tend to focus on their own piece.</p>
+
+<h3>Storytelling is all you need. But what is a story?</h3>
+
+<p>I used to hear “storytelling” as a polite word for spin. Now I think a good story answers a hard question, and then the next one. The pitches that seemed most compelling to me stayed close to a principle, not just a product. Work on mechanisms, such as interpretability, seemed to give founders a story that felt more intellectual, the kind investors might call “sexy,” and more persuasive. I saw only a small sample, so I hold this loosely.</p>
+
+<h3>What I took away</h3>
+
+<p>On both sides, investors and founders, what stood out was the quality of the questions. Investors ask where a field is going and what would have to be true for a story to hold. Founders ask what problem is worth building a company around. A story is only as good as the question under it.</p>
+
+<p>My boss once told me something I haven’t forgotten: a good business plan reads like a debate. It raises the right question, answers it well, raises the next question, answers that, and so on. If it ends on a good answer, the plan stands. Every round starts with a question.</p>
+
+<p>This also changed how I think about execution. Strong execution is valuable, but it compounds linearly: it makes the current plan go faster. A good question can change what is worth executing in the first place. It’s a bold thing for an intern to say, but I now think the person who asks the better question usually moves more than the person who simply works harder. Even so, doing anything well takes two things: looking up at the sky and keeping your feet on the ground. So I still need both.</p>
+
+<p>I don’t know how far these observations generalize. But they have changed what I pay attention to. When I meet a new field, a company, or a paper, I first ask what question it is really answering, and whether its last answer holds.</p></div>
+<p class="section-copy-status" data-section-copy-status></p>
+</article>
+</aside>
+</div>
+<script id="layout-metrics" type="application/json">[{"id":0,"tag":"div","words":[3,9,5,5],"desktop":{"width":207.406,"height":19.5,"font":13,"line":19.5},"mobile":{"width":383,"height":19.5,"font":13,"line":19.5}},{"id":1,"tag":"h1","words":[6,5],"desktop":{"width":147.5,"height":32,"font":24,"line":32},"mobile":{"width":383,"height":32,"font":24,"line":32}},{"id":2,"tag":"div","words":[6,1,8,1,1,1,8,1,8],"desktop":{"width":366.75,"height":19.5,"font":13,"line":19.5},"mobile":{"width":383,"height":19.5,"font":13,"line":19.5}},{"id":3,"tag":"span","words":[10],"desktop":{"width":116.5,"height":34,"font":13,"line":19.5},"mobile":{"width":116.5,"height":34,"font":13,"line":19.5}},{"id":4,"tag":"p","words":[6,2,1,9,9,3,6,4,3,5,10,8,9,7,3,6,4,9,3,7,3,6,4,2,6,1,5,10,5,8,5,3,8,3,8,10,5,5,3,5,1,3,3,9],"desktop":{"width":938,"height":200,"font":32,"line":40},"mobile":{"width":367,"height":288,"font":24,"line":32}},{"id":5,"tag":"h2","words":[8],"desktop":{"width":66,"height":18,"font":13,"line":18},"mobile":{"width":66,"height":18,"font":13,"line":18}},{"id":6,"tag":"h3","words":[1,10,2,4,6],"desktop":{"width":303.25,"height":32,"font":24,"line":32},"mobile":{"width":367,"height":32,"font":24,"line":32}},{"id":7,"tag":"p","words":[4,5,7,6,8,12,10,8,12,12,3,4,2,4],"desktop":{"width":303.25,"height":78,"font":13,"line":19.5},"mobile":{"width":367,"height":58.5,"font":13,"line":19.5}},{"id":8,"tag":"a","words":[4,2,6],"desktop":{"width":115.5,"height":20.5,"font":13,"line":19.5},"mobile":{"width":115.5,"height":20.5,"font":13,"line":19.5}},{"id":9,"tag":"h3","words":[1,7,4,8],"desktop":{"width":303.25,"height":32,"font":24,"line":32},"mobile":{"width":367,"height":32,"font":24,"line":32}},{"id":10,"tag":"p","words":[9,3,5,2,11,7,1,12,2,6,7,8,11,9,6,2,3,3,7,7,3,3,3,2,3,8,10],"desktop":{"width":303.25,"height":117,"font":13,"line":19.5},"mobile":{"width":367,"height":97.5,"font":13,"line":19.5}},{"id":11,"tag":"a","words":[4,2,6],"desktop":{"width":115.5,"height":20.5,"font":13,"line":19.5},"mobile":{"width":115.5,"height":20.5,"font":13,"line":19.5}},{"id":12,"tag":"h3","words":[4,5,1,8,11],"desktop":{"width":303.25,"height":64,"font":24,"line":32},"mobile":{"width":367,"height":32,"font":24,"line":32}},{"id":13,"tag":"p","words":[1,9,2,4,5,1,8,8,3,8,8,4,4,9,4,3,8,3,8],"desktop":{"width":303.25,"height":78,"font":13,"line":19.5},"mobile":{"width":367,"height":58.5,"font":13,"line":19.5}},{"id":14,"tag":"a","words":[4,2,6],"desktop":{"width":115.5,"height":20.5,"font":13,"line":19.5},"mobile":{"width":115.5,"height":20.5,"font":13,"line":19.5}},{"id":15,"tag":"h3","words":[11,2,11],"desktop":{"width":303.25,"height":32,"font":24,"line":32},"mobile":{"width":367,"height":32,"font":24,"line":32}},{"id":16,"tag":"p","words":[4,3,6,4,3,5,8,3,4,3,4,4,2,8,3,2,8,5],"desktop":{"width":303.25,"height":58.5,"font":13,"line":19.5},"mobile":{"width":367,"height":58.5,"font":13,"line":19.5}},{"id":17,"tag":"a","words":[4,2,6],"desktop":{"width":115.5,"height":20.5,"font":13,"line":19.5},"mobile":{"width":115.5,"height":20.5,"font":13,"line":19.5}},{"id":18,"tag":"h2","words":[6],"desktop":{"width":49.5,"height":18,"font":13,"line":18},"mobile":{"width":49.5,"height":18,"font":13,"line":18}},{"id":19,"tag":"h3","words":[8,5],"desktop":{"width":417.328,"height":32,"font":24,"line":32},"mobile":{"width":383,"height":32,"font":24,"line":32}},{"id":20,"tag":"p","words":[1,8,2,1,6,7,8,8,5,2,1,8,4,6,3,10,3,5,1,12,4,4,5,2,5,3,4,7,2,6,6,2,4],"desktop":{"width":417.328,"height":78,"font":13,"line":19.5},"mobile":{"width":383,"height":97.5,"font":13,"line":19.5}},{"id":21,"tag":"li","words":[5,5,3,8],"desktop":{"width":391.328,"height":19.5,"font":13,"line":19.5},"mobile":{"width":357,"height":19.5,"font":13,"line":19.5}},{"id":22,"tag":"li","words":[1,8,5,6,8,5,5,3,7],"desktop":{"width":391.328,"height":39,"font":13,"line":19.5},"mobile":{"width":357,"height":39,"font":13,"line":19.5}},{"id":23,"tag":"li","words":[8,2,2,1,4,2,4,4,5,3,5,2,3],"desktop":{"width":391.328,"height":39,"font":13,"line":19.5},"mobile":{"width":357,"height":39,"font":13,"line":19.5}},{"id":24,"tag":"li","words":[3,6,11,8,2,9,3,5],"desktop":{"width":391.328,"height":39,"font":13,"line":19.5},"mobile":{"width":357,"height":39,"font":13,"line":19.5}},{"id":25,"tag":"li","words":[9,3,6,9,6,6,4,3,7,2],"desktop":{"width":391.328,"height":39,"font":13,"line":19.5},"mobile":{"width":357,"height":39,"font":13,"line":19.5}},{"id":26,"tag":"a","words":[8,5],"desktop":{"width":115.5,"height":20.5,"font":13,"line":19.5},"mobile":{"width":115.5,"height":20.5,"font":13,"line":19.5}},{"id":27,"tag":"h3","words":[6,8,9],"desktop":{"width":631,"height":32,"font":24,"line":32},"mobile":{"width":367,"height":32,"font":24,"line":32}},{"id":28,"tag":"p","words":[6,8,9,2,8,3,4,8,4,9,10,7,10,7,7,7,3,15,4,4,2,5,1,9,4,5,2,4,3],"desktop":{"width":631,"height":58.5,"font":13,"line":19.5},"mobile":{"width":367,"height":97.5,"font":13,"line":19.5}},{"id":29,"tag":"li","words":[5,5,2,8,8,3,5,2,4,2,8],"desktop":{"width":605,"height":19.5,"font":13,"line":19.5},"mobile":{"width":341,"height":39,"font":13,"line":19.5}},{"id":30,"tag":"li","words":[5,5,10,3,5,10,2,4,8,2,3,4],"desktop":{"width":605,"height":19.5,"font":13,"line":19.5},"mobile":{"width":341,"height":39,"font":13,"line":19.5}},{"id":31,"tag":"li","words":[7,4,7,6,7,6,3,9,9],"desktop":{"width":605,"height":19.5,"font":13,"line":19.5},"mobile":{"width":341,"height":39,"font":13,"line":19.5}},{"id":32,"tag":"li","words":[5,2,10,3,7,12,3,6,6],"desktop":{"width":605,"height":19.5,"font":13,"line":19.5},"mobile":{"width":341,"height":39,"font":13,"line":19.5}},{"id":33,"tag":"li","words":[7,3,6,2,12,10,7],"desktop":{"width":605,"height":19.5,"font":13,"line":19.5},"mobile":{"width":341,"height":39,"font":13,"line":19.5}},{"id":34,"tag":"li","words":[9,10,2,8,3,6,2],"desktop":{"width":605,"height":19.5,"font":13,"line":19.5},"mobile":{"width":341,"height":39,"font":13,"line":19.5}},{"id":35,"tag":"li","words":[5,5,8,6,8],"desktop":{"width":605,"height":19.5,"font":13,"line":19.5},"mobile":{"width":341,"height":19.5,"font":13,"line":19.5}},{"id":36,"tag":"a","words":[3,4,5,2,5,6],"desktop":{"width":247.5,"height":20.5,"font":13,"line":19.5},"mobile":{"width":247.5,"height":20.5,"font":13,"line":19.5}},{"id":37,"tag":"h3","words":[4],"desktop":{"width":303.5,"height":32,"font":24,"line":32},"mobile":{"width":367,"height":32,"font":24,"line":32}},{"id":38,"tag":"p","words":[6,3,6,8,2,6,3,4,2,3,2,5,11,8,9,6,3,9,1,6,1],"desktop":{"width":303.5,"height":78,"font":13,"line":19.5},"mobile":{"width":367,"height":58.5,"font":13,"line":19.5}},{"id":39,"tag":"p","words":[4,5,1,12,4,4,6,10,5,2,7,3,4,7,10,3,8,2,1,7,8,2,10,2,5,1,4,3,13,2,4,2,5,3,12,2,3,2,3,7,8,92,1],"desktop":{"width":303.5,"height":195,"font":13,"line":19.5},"mobile":{"width":367,"height":175.5,"font":13,"line":19.5}},{"id":40,"tag":"a","words":[4,3,4,5],"desktop":{"width":156.75,"height":20.5,"font":13,"line":19.5},"mobile":{"width":156.75,"height":20.5,"font":13,"line":19.5}},{"id":41,"tag":"h3","words":[6],"desktop":{"width":303.5,"height":32,"font":24,"line":32},"mobile":{"width":367,"height":32,"font":24,"line":32}},{"id":42,"tag":"p","words":[6,3,4,6,6,8,4,3,4,5,3,5,7],"desktop":{"width":303.5,"height":58.5,"font":13,"line":19.5},"mobile":{"width":367,"height":39,"font":13,"line":19.5}},{"id":43,"tag":"p","words":[2,5,1,6,3,6,6,4,7,8,10,4,3,6,3,2,7,6,8,6,3,4,11,3,10,3,4,10,7,3,8,3,7,3,6,5],"desktop":{"width":303.5,"height":136.5,"font":13,"line":19.5},"mobile":{"width":367,"height":117,"font":13,"line":19.5}},{"id":44,"tag":"p","words":[6,1,7,2,7,4,7,2,5,6,8,3,9,4,8,2,3],"desktop":{"width":303.5,"height":58.5,"font":13,"line":19.5},"mobile":{"width":367,"height":58.5,"font":13,"line":19.5}},{"id":45,"tag":"a","words":[6],"desktop":{"width":49.5,"height":20.5,"font":13,"line":19.5},"mobile":{"width":49.5,"height":20.5,"font":13,"line":19.5}},{"id":46,"tag":"h3","words":[9],"desktop":{"width":309.5,"height":32,"font":24,"line":32},"mobile":{"width":367,"height":32,"font":24,"line":32}},{"id":47,"tag":"p","words":[9,2,1,12,8,8,5,4,1,4,10],"desktop":{"width":309.5,"height":39,"font":13,"line":19.5},"mobile":{"width":367,"height":39,"font":13,"line":19.5}},{"id":48,"tag":"p","words":[2,4,3,5,1,8,3,5,3,3,3,12,9,3,3,7,2,8,4,2,5,9,7,6,3,3,2,3,3,3,4,5,8,5],"desktop":{"width":309.5,"height":117,"font":13,"line":19.5},"mobile":{"width":367,"height":97.5,"font":13,"line":19.5}},{"id":49,"tag":"a","words":[9],"desktop":{"width":74.25,"height":20.5,"font":13,"line":19.5},"mobile":{"width":74.25,"height":20.5,"font":13,"line":19.5}},{"id":50,"tag":"h3","words":[8,3,7],"desktop":{"width":619,"height":32,"font":24,"line":32},"mobile":{"width":367,"height":32,"font":24,"line":32}},{"id":51,"tag":"p","words":[3,7,5,3,5,7,5,6,4,5,3,1,7,1,6,2,10,4,5,2,7,1,7,8,5,3,5,7,4,4,2,5,6,2,7,3,5,4,10,2,1,7],"desktop":{"width":619,"height":78,"font":13,"line":19.5},"mobile":{"width":367,"height":117,"font":13,"line":19.5}},{"id":52,"tag":"a","words":[8,7],"desktop":{"width":132,"height":20.5,"font":13,"line":19.5},"mobile":{"width":132,"height":20.5,"font":13,"line":19.5}},{"id":53,"tag":"a","words":[8,6,7],"desktop":{"width":189.75,"height":20.5,"font":13,"line":19.5},"mobile":{"width":189.75,"height":20.5,"font":13,"line":19.5}},{"id":54,"tag":"a","words":[8,7,5],"desktop":{"width":181.5,"height":20.5,"font":13,"line":19.5},"mobile":{"width":181.5,"height":20.5,"font":13,"line":19.5}},{"id":55,"tag":"a","words":[8,7,7],"desktop":{"width":198,"height":20.5,"font":13,"line":19.5},"mobile":{"width":198,"height":20.5,"font":13,"line":19.5}},{"id":56,"tag":"h3","words":[8,11],"desktop":{"width":309.5,"height":32,"font":24,"line":32},"mobile":{"width":367,"height":32,"font":24,"line":32}},{"id":57,"tag":"p","words":[2,5,1,11,1,5,7,2,6,7,3,6,2,8,12,1,14,7,7],"desktop":{"width":309.5,"height":78,"font":13,"line":19.5},"mobile":{"width":367,"height":78,"font":13,"line":19.5}},{"id":58,"tag":"p","words":[3,10,4,2,7,4,7,5,9,4,2,6,8,10,3,10,2,1,3,7,2,8,3,4,3,3,5,2,6,3,3,7,2,4,1,7],"desktop":{"width":309.5,"height":136.5,"font":13,"line":19.5},"mobile":{"width":367,"height":97.5,"font":13,"line":19.5}},{"id":59,"tag":"h2","words":[9,4,8],"desktop":{"width":189.75,"height":18,"font":13,"line":18},"mobile":{"width":189.75,"height":18,"font":13,"line":18}},{"id":60,"tag":"h3","words":[6,4,4],"desktop":{"width":412.664,"height":32,"font":24,"line":32},"mobile":{"width":367,"height":32,"font":24,"line":32}},{"id":61,"tag":"a","words":[4,2,8],"desktop":{"width":132,"height":20.5,"font":13,"line":19.5},"mobile":{"width":132,"height":20.5,"font":13,"line":19.5}},{"id":62,"tag":"h3","words":[7],"desktop":{"width":412.672,"height":32,"font":24,"line":32},"mobile":{"width":367,"height":32,"font":24,"line":32}},{"id":63,"tag":"a","words":[4,2,8],"desktop":{"width":132,"height":20.5,"font":13,"line":19.5},"mobile":{"width":132,"height":20.5,"font":13,"line":19.5}},{"id":64,"tag":"h3","words":[9],"desktop":{"width":412.664,"height":32,"font":24,"line":32},"mobile":{"width":367,"height":32,"font":24,"line":32}},{"id":65,"tag":"a","words":[4,2,8],"desktop":{"width":132,"height":20.5,"font":13,"line":19.5},"mobile":{"width":132,"height":20.5,"font":13,"line":19.5}},{"id":66,"tag":"div","words":[9,1,4,6,5],"desktop":{"width":644,"height":33,"font":11,"line":16.5},"mobile":{"width":383,"height":16.5,"font":11,"line":16.5}},{"id":67,"tag":"div","words":[5,2,4,5],"desktop":{"width":644,"height":33,"font":11,"line":16.5},"mobile":{"width":383,"height":16.5,"font":11,"line":16.5}}]</script><script src="./js/map-preview-fit.js?v=balanced-columns"></script><script src="./js/research-preview-fit.js?v=natural-gap"></script>
+  <script defer src="./js/action-labels.js?v=purpose-labels"></script>
+  <script defer src="./js/reading-mode.js?v=public-reading"></script></body>
+
+
+
+</html>

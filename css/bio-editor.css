@@ -1,0 +1,133 @@
+@font-face {
+  font-family: "URW Classico";
+  src: url("../fonts/URWClassico-Regular.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+.bio-draft {
+  width: 100%;
+  min-width: 0;
+}
+
+.profile { font-size: 28px; line-height: 36px; }
+
+.bio-draft [hidden] { display: none !important; }
+.bio-display {
+  font-family: "URW Classico", "PMingLiU", "新細明體", serif;
+  letter-spacing: normal;
+  overflow-wrap: anywhere;
+}
+.bio-display p { margin: 0 0 1em; white-space: pre-wrap; }
+.bio-display p:last-child { margin-bottom: 0; }
+.bio-display h2 { font: inherit; font-size: 28px; line-height: 36px; margin: 1.4em 0 .65em; }
+.bio-display:focus, .bio-display h2:focus { outline: none; }
+.bio-display [data-bio-block] { min-height: 1em; cursor: text; white-space: pre-wrap; }
+.bio-display [data-bio-block]:hover { outline: 1px dashed color-mix(in srgb, currentColor 45%, transparent); outline-offset: 5px; }
+.bio-display [data-bio-block]:focus { outline: 1px solid currentColor; outline-offset: 5px; }
+.bio-display [data-bio-block]:empty::before { content: attr(data-placeholder); opacity: .45; pointer-events: none; }
+.bio-display a { cursor: pointer; }
+.bio-guide-paper {
+  position: relative;
+  isolation: isolate;
+  margin: .85em 0 .95em;
+  padding: 35px 58px 42px 35px;
+  color: #292722;
+}
+.bio-guide-paper::before {
+  content: "";
+  position: absolute;
+  inset: 0 -7px;
+  z-index: -1;
+  pointer-events: none;
+  border: solid transparent;
+  border-width: 104px 120px 40px 44px;
+  border-image: url("../images/site-guide-paper.webp") 540 620 170 220 fill stretch;
+  filter: brightness(1.075) drop-shadow(0 2px 3px rgb(35 30 18 / 6%));
+}
+.bio-guide-paper > h2 { margin: 6px 34px calc(.55em - 6px) 0; font-weight: 700; }
+.bio-guide-paper > p { margin-bottom: .65em; }
+.bio-empty { color: #999; }
+.guide-link, .guide-return {
+  color: inherit;
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .18em;
+  text-decoration-skip-ink: auto;
+}
+.guide-link:hover, .guide-return:hover { color: #666; }
+.guide-link:focus-visible, .guide-return:focus-visible, #bio-edit-toggle:focus-visible {
+  outline: 1px solid currentColor;
+  outline-offset: 4px;
+}
+.bio-tools { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 20px; margin-top: 24px; }
+#bio-edit-toggle {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #555;
+  padding: 0;
+  font-family: "URW Classico", "PMingLiU", serif;
+  font-size: 18px;
+  line-height: 1.5;
+  text-decoration: underline;
+  text-underline-offset: .2em;
+  cursor: pointer;
+}
+.home-section { font-family: "URW Classico", "PMingLiU", "新細明體", serif; }
+/* Leave a modest scroll runway after the final article, measured in visible pixels. */
+#blogs { padding-bottom: calc(clamp(96px, 16vh, 180px) / var(--editorial-scale, 1)) !important; }
+.home-section .section-heading { justify-content: space-between; gap: 24px; margin-bottom: 28px; }
+.home-section .section-heading h2 { margin-left: 0; padding: 0; font-size: 32px; line-height: 40px; font-weight: 400; }
+.home-section .section-heading h2:focus { outline: none; }
+.guide-return { flex-shrink: 0; font-size: 18px; line-height: 1.5; }
+
+.bio-editor {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 160px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  outline: 1px solid transparent;
+  outline-offset: 8px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-family: "URW Classico", "PMingLiU", "新細明體", serif;
+  letter-spacing: normal;
+  text-align: left;
+  overflow-wrap: anywhere;
+  resize: none;
+  overflow: hidden;
+}
+
+.bio-editor::placeholder { color: #999; opacity: 1; }
+.bio-editor:hover { outline-color: #e5e5e5; }
+.bio-editor:focus { outline-color: #999; }
+
+.bio-draft-status {
+  display: block;
+  margin-top: 0;
+  color: #777;
+  font-family: "URW Classico", "PMingLiU", "新細明體", serif;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: normal;
+}
+
+@media screen and (max-width: 848px) {
+  .profile { font-size: 22px; line-height: 30px; }
+  .bio-display h2 { font-size: 22px; line-height: 30px; }
+  .bio-guide-paper { padding: 27px 39px 32px 25px; font-size: 19px; line-height: 27px; }
+  .bio-guide-paper::before { inset-inline: -4px; border-width: 77px 88px 29px 32px; }
+  .bio-guide-paper > h2 { margin-right: 22px; }
+  .bio-editor { min-height: 128px; }
+  .bio-draft-status { font-size: 13px; }
+  #bio-edit-toggle, .guide-return { font-size: 14px; }
+  .home-section .section-heading { gap: 12px; margin-bottom: 20px; }
+  .home-section .section-heading h2 { font-size: 24px; line-height: 32px; }
+}

@@ -1,0 +1,92 @@
+.portrait-contacts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin: 2px 0 0;
+  padding: 0;
+  color: #555;
+  font-family: "URW Classico", "PMingLiU", serif;
+  font-size: 22px;
+  line-height: 1.5;
+  letter-spacing: normal;
+  white-space: nowrap;
+}
+.portrait-contacts a, .portrait-contacts button, .contact-actions a, .contact-actions button,
+.wechat-save {
+  display: inline-block;
+  padding: 6px 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: #aaa;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .2em;
+}
+.portrait-contacts > span { color: #aaa; }
+.portrait-contacts a:hover, .portrait-contacts button:hover,
+.portrait-contacts button[aria-expanded="true"], .contact-actions a:hover,
+.contact-actions button:hover, .wechat-save:hover {
+  color: #111;
+  text-decoration-color: currentColor;
+}
+.portrait-contacts a:focus-visible, .portrait-contacts button:focus-visible,
+.contact-panel a:focus-visible, .contact-panel button:focus-visible {
+  outline: 1px solid currentColor;
+  outline-offset: 4px;
+}
+.contact-panel {
+  --contact-paper: #fff;
+  --contact-paper: light-dark(#fff, #ddd);
+  width: 100%;
+  max-width: 320px;
+  margin: 20px auto 0;
+  padding: 0;
+  color: #555;
+  font-family: "URW Classico", "PMingLiU", "新細明體", serif;
+  font-size: 22px;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: center;
+}
+.contact-panel[hidden] { display: none; }
+.wechat-qr-window { width: 85%; aspect-ratio: 1; margin: 0 auto; }
+.wechat-qr-window svg { display: block; width: 100%; height: auto; }
+.contact-panel .qr-paper { fill: var(--contact-paper); }
+.contact-panel .qr-ink { fill: #111; }
+.wechat-save { margin-top: 6px; }
+.email-address {
+  display: block;
+  color: inherit;
+  overflow-wrap: anywhere;
+  user-select: text;
+  -webkit-user-select: text;
+}
+.contact-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-top: 6px; }
+.email-composer-options { flex-direction: column; gap: 0; margin-top: 10px; }
+.email-composer-options[hidden] { display: none; }
+.contact-actions button[aria-expanded="true"] { color: #111; }
+.contact-copy-status { margin: 6px 0 0; font-size: 20px; line-height: 1.4; }
+.contact-copy-status:empty { display: none; }
+
+:root[data-theme="dark"] .contact-panel { --contact-paper: #ddd; color: #bbb; }
+:root[data-theme="dark"] .portrait-contacts { color: #bbb; }
+:root[data-theme="dark"] .portrait-contacts a:hover,
+:root[data-theme="dark"] .portrait-contacts button:hover,
+:root[data-theme="dark"] .portrait-contacts button[aria-expanded="true"],
+:root[data-theme="dark"] .contact-actions a:hover,
+:root[data-theme="dark"] .contact-actions button:hover,
+:root[data-theme="dark"] .contact-actions button[aria-expanded="true"],
+:root[data-theme="dark"] .wechat-save:hover { color: #fff; }
+
+@media screen and (max-width: 848px) {
+  .portrait-contacts { gap: 12px; margin-top: 0; font-size: 15px; }
+  .portrait-contacts a, .portrait-contacts button { padding: 10px 0; }
+  .contact-panel { max-width: 240px; margin-top: 10px; font-size: 15px; }
+  .contact-actions a, .contact-actions button, .wechat-save { padding: 10px 0; }
+  .contact-copy-status { font-size: 14px; }
+}

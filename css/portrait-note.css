@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "Permanent Marker";
+  src: url("../fonts/PermanentMarker-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+.portrait-signature {
+  position: relative;
+  container-type: inline-size;
+  color: #222;
+}
+.portrait-note {
+  width: max-content;
+  margin: calc(-10.7cqw + 48px) 6px 18px auto;
+  padding: 0 0 5px;
+}
+.portrait-note-arrow {
+  position: absolute;
+  left: calc(34cqw + 8px);
+  top: 89.3cqw;
+  display: block;
+  width: 46px;
+  height: 16px;
+  background: currentColor;
+  -webkit-mask: url("../images/portrait-crayon-arrow.png") center / contain no-repeat;
+  mask: url("../images/portrait-crayon-arrow.png") center / contain no-repeat;
+  transform: rotate(55deg);
+  transform-origin: left center;
+  pointer-events: none;
+}
+.portrait-note-text {
+  display: block;
+  font-family: "Permanent Marker", cursive;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.24;
+  letter-spacing: 0;
+  white-space: nowrap;
+  transform: rotate(-4deg);
+  transform-origin: left top;
+}
+.portrait-note-text span { display: block; }
+.portrait-note-text span + span {
+  margin-left: 6px;
+}
+:root[data-theme="dark"] .portrait-signature { color: #ddd; }
+
+@media screen and (max-width: 848px) {
+  .portrait-note {
+    margin: calc(-8.1cqw + 22px) 0 18px min(calc(43cqw + 46px), calc(100cqw - 165px));
+  }
+  .portrait-note-arrow {
+    left: calc(43cqw + 5px);
+    top: calc(91.9cqw - 20px);
+    width: 48px;
+    height: 16px;
+  }
+  .portrait-note-text { font-size: 20px; }
+}

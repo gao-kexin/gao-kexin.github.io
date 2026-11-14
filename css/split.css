@@ -1,0 +1,87 @@
+/* The sheet keeps its width and scroll position as its viewport moves. */
+.editorial-surface { margin-inline: auto; --copy-display-scale: var(--editorial-scale, 1); }
+.split-panel-left:focus-visible { outline: 1px solid #777; outline-offset: -1px; }
+.split-panel-right { display: none; }
+.project-detail, .section-detail {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+.home-scrollbar { display: none; }
+.home-scrollbar[hidden] { display: none !important; }
+@media screen and (min-width: 1000px) {
+  html, body { height: 100%; overflow: hidden; }
+  .split-layout {
+    --panel-easing: cubic-bezier(.22, .61, .36, 1);
+    position: relative; height: 100vh; height: 100dvh; width: 100%; overflow: hidden;
+    timeline-scope: --home-scroll;
+  }
+  .split-panel {
+    box-sizing: border-box; min-width: 0; height: 100%;
+    overflow-x: hidden; overflow-y: auto; overscroll-behavior-y: contain;
+    overflow-anchor: none; scrollbar-gutter: stable;
+  }
+  .split-panel-left {
+    width: 100%; scrollbar-width: none; scrollbar-gutter: auto;
+    scroll-timeline: --home-scroll block;
+  }
+  .split-panel-left::-webkit-scrollbar { display: none; }
+  .split-panel-right {
+    display: block; position: absolute; top: 0; right: 0; width: 50%;
+    padding: 28px clamp(20px, 2.5vw, 42px);
+    opacity: 0; visibility: hidden; transform: translateX(24px); pointer-events: none;
+    transition: opacity 150ms ease, transform 180ms ease, visibility 0s linear 180ms, background-color 300ms ease;
+  }
+  .split-layout[data-details-open="true"] .split-panel-right {
+    opacity: 1; visibility: visible; transform: translateX(0); pointer-events: auto;
+    transition: opacity 260ms ease 220ms, transform 320ms var(--panel-easing) 200ms, visibility 0s, background-color 300ms ease;
+  }
+  .editorial-surface {
+    width: 1320px; zoom: var(--editorial-scale, 1);
+    transform: translateX(0);
+    transition: transform 500ms var(--panel-easing) 150ms;
+  }
+  .split-layout[data-details-open="true"] .editorial-surface {
+    transform: translateX(var(--editorial-shift, 0px));
+    transition-delay: 0ms;
+  }
+  /* A transparent overlay shows the actual section underneath, with no copied color bands. */
+  .home-scrollbar {
+    display: block; position: absolute; top: 0; right: 0;
+    width: 15px; height: 100%; z-index: 2; touch-action: none;
+    transition: right 500ms var(--panel-easing) 150ms;
+  }
+  .split-layout[data-details-open="true"] .home-scrollbar { right: 50%; transition-delay: 0ms; }
+  .home-scrollbar:focus { outline: none; }
+  .home-scrollbar:focus-visible .home-scrollbar-thumb { outline: 1px solid #888; }
+  .home-scrollbar-thumb {
+    position: absolute; top: 0; left: 4px; width: 7px;
+    height: var(--thumb-height, 40px); border-radius: 20px;
+    background: #88888888;
+    transform: translateY(var(--thumb-offset, 0px));
+  }
+  @supports (animation-timeline: scroll()) {
+    .home-scrollbar-thumb {
+      animation: home-scroll-progress 1s linear both;
+      animation-timeline: --home-scroll;
+    }
+    @keyframes home-scroll-progress {
+      from { transform: translateY(0); }
+      to { transform: translateY(var(--thumb-travel, 0px)); }
+    }
+  }
+}
+@media screen and (max-width: 999px) {
+  .editorial-surface { width: auto; }
+  .split-panel-right { display: none; }
+  .project-mobile-detail, .section-mobile-detail {
+    margin: 30px 0;
+    padding: 28px 0 0;
+    border-top: 1px solid var(--section-rule);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .split-layout .editorial-surface, .split-layout .split-panel-right, .home-scrollbar { transition: none !important; }
+}

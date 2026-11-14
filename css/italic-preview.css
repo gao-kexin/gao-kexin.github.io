@@ -1,0 +1,10 @@
+/* Alternate masthead: the same size and weight as the upright version. */
+@font-face {
+  font-family: "Fraunces";
+  src: url("../fonts/Fraunces-Italic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+.site-name { font-style: italic; }

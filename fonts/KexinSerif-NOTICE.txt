@@ -1,0 +1,11 @@
+Kexin Serif ExtraBold Italic is a modified version of Fraunces.
+Original copyright: Copyright 2018 The Fraunces Project Authors
+(https://github.com/undercasetype/Fraunces)
+
+Licensed under the SIL Open Font License 1.1, provided in Fraunces-OFL.txt.
+
+The font is instantiated at weight 800, optical size 72, SOFT 0, WONK 0.
+Only lowercase x has been changed: the corresponding upright x is slanted
+16 degrees and fitted to the original italic x ink width. Its advance and
+the other glyphs are preserved. The derivative uses the family name
+Kexin Serif to distinguish it from the original Fraunces family.

@@ -1,0 +1,92 @@
+/* Every detail panel keeps its exit in the same visible corner. */
+.project-detail-top,
+.section-detail-top {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  isolation: isolate;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 44px;
+  margin-bottom: 22px;
+  background: var(--detail-section-bg, var(--section-bg, #fff));
+  transition: background-color 300ms ease;
+}
+.project-detail-top::before,
+.section-detail-top::before {
+  content: "";
+  position: absolute;
+  inset: 0 -6px -8px;
+  z-index: -1;
+  background: inherit;
+  pointer-events: none;
+}
+.project-detail-top .project-close,
+.section-detail-top .section-close {
+  order: 1;
+  flex: none;
+  min-width: 72px;
+  min-height: 44px;
+  margin-left: auto;
+  padding: 10px 4px;
+  text-align: right;
+}
+.project-detail-top > a,
+.section-detail-top > a { margin-right: auto; }
+.split-panel-right { scroll-padding-top: 64px; }
+.project-detail, .section-detail { scroll-margin-top: 12px; }
+.detail-part { scroll-margin-top: 64px; }
+@media screen and (min-width: 1000px) {
+  .split-panel-right { padding-top: 16px; }
+  .project-detail-top::before, .section-detail-top::before { top: -16px; }
+}
+
+/* Navigation emphasizes text and underline together without changing color. */
+.split-layout {
+  --link-underline-width: 1px;
+  --link-underline-hover-width: 2px;
+}
+.editorial-surface {
+  --link-underline-width: calc(1px / var(--editorial-scale, 1));
+  --link-underline-hover-width: calc(2px / var(--editorial-scale, 1));
+}
+.split-layout :is(a[href], .section-open, .reading-action, .project-close, .section-close,
+  [data-project-open-label], .portrait-contacts button, .contact-actions button) {
+  color: inherit !important;
+  opacity: 1;
+  text-decoration-color: currentColor !important;
+  text-decoration-thickness: var(--link-underline-width);
+  text-underline-offset: .22em;
+  transition: text-decoration-thickness 120ms ease;
+}
+.split-layout :is(a[href], .section-open, .reading-action, .project-close, .section-close,
+  [data-project-open-label], .portrait-contacts button, .contact-actions button):is(:hover, :focus-visible) {
+  color: inherit !important;
+  opacity: 1;
+  font-weight: 700;
+  text-decoration-line: underline;
+  text-decoration-thickness: var(--link-underline-hover-width);
+}
+[data-navigation-area] { cursor: pointer; }
+[data-reading-mode="true"] :is([data-copy-key], [data-project-text], [data-bio-block]) {
+  cursor: inherit;
+  outline: none !important;
+}
+[data-reading-mode="true"] :is([data-project-draft-status], [data-section-copy-status], .bio-draft-status, .copy-format-toolbar, #bio-edit-toggle, #bio-editor) {
+  display: none !important;
+}
+[data-navigation-area] :is([contenteditable="true"], [data-section-copy-status], [data-project-draft-status]) { cursor: text; }
+[data-navigation-area]:hover:not(:has([contenteditable="true"]:hover)) > .mindset-overview-action > [data-area-action],
+.mindset-taste:hover:not(:has([contenteditable="true"]:hover)) [data-area-action],
+.project-card:hover:not(:has([contenteditable="true"]:hover)) [data-area-action],
+.reading-row:hover:not(:has([contenteditable="true"]:hover)) [data-area-action],
+.map-feature:hover:not(:has([contenteditable="true"]:hover)) + .mindset-overview-action > [data-area-action] {
+  font-weight: 700;
+  text-decoration-line: underline;
+  text-decoration-thickness: var(--link-underline-hover-width);
+}
+@media (prefers-reduced-motion: reduce) {
+  .project-detail-top, .section-detail-top,
+  .split-layout :is(a[href], button) { transition: none; }
+}

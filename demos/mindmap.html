@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en" data-theme="light" data-font="serif">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Try Mindmap</title>
+  <link rel="stylesheet" href="./mindmap.css?v=original-chrome">
+  <script type="module" src="./mindmap.js?v=centered-seed"></script>
+</head>
+<body>
+<svg class="icon-defs" aria-hidden="true"><defs>
+  <symbol id="i-undo" viewBox="0 0 24 24"><path d="M9 4 4 9l5 5M4 9h10a6 6 0 0 1 0 12"/></symbol>
+  <symbol id="i-redo" viewBox="0 0 24 24"><path d="m15 4 5 5-5 5m5-5H10a6 6 0 0 0 0 12"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20.8 13A9 9 0 0 1 11 3.2 9 9 0 1 0 20.8 13Z"/></symbol>
+  <symbol id="i-outline" viewBox="0 0 24 24"><path d="M21 6H8m13 6h-8m8 6h-8M3 6v4a2 2 0 0 0 2 2h3M3 10v6a2 2 0 0 0 2 2h3"/></symbol>
+  <symbol id="i-languages" viewBox="0 0 24 24"><path d="m5 8 6 6m-7 0 6-6 2-5M2 5h12M7 2v3m15 17-5-11-5 11m2-4h6"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+  <symbol id="i-fold" viewBox="0 0 24 24"><path d="m7 9 5-5 5 5m-10 6 5 5 5-5"/></symbol>
+  <symbol id="i-more" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></symbol>
+  <symbol id="i-child" viewBox="0 0 24 24"><path d="M4 3v10a4 4 0 0 0 4 4h12m-5-5 5 5-5 5"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+  <symbol id="i-edit" viewBox="0 0 24 24"><path d="m15 5 4 4M4 20l4-1L20 7a2.8 2.8 0 0 0-4-4L4 15Z"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><path d="M3 6h18M9 6V3h6v3M5 6l1 15h12l1-15M10 10v7m4-7v7"/></symbol>
+  <symbol id="i-fit" viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></symbol>
+</defs></svg>
+<div class="app">
+  <header class="titlebar">
+    <div class="brand"><img src="./assets/mindmap-icon.png" width="27" height="27" alt=""><span>Kexin's Mindmap</span></div>
+    <div class="appearance-controls">
+      <button class="icon-button font-toggle" id="font-toggle" type="button" aria-label="Switch font" title="Switch font"><svg><use href="#i-languages"/></svg></button>
+      <button class="icon-button" id="theme-toggle" type="button" aria-label="Dark mode" title="Dark mode"><svg><use href="#i-moon"/></svg></button>
+    </div>
+  </header>
+  <header class="toolbar">
+    <div class="file-section">
+      <div class="document-heading"><span id="document-title">Start with an idea</span></div>
+    </div>
+    <div class="history-buttons">
+      <button class="icon-button" id="undo" type="button" aria-label="Undo" title="Undo (Ctrl / ⌘ Z)" disabled><svg><use href="#i-undo"/></svg></button>
+      <button class="icon-button" id="redo" type="button" aria-label="Redo" title="Redo (Ctrl / ⌘ Shift Z)" disabled><svg><use href="#i-redo"/></svg></button>
+      <span class="divider"></span>
+      <button class="icon-button" id="outline-toggle" type="button" aria-label="Show outline" title="Show outline" aria-expanded="false" aria-controls="outline"><svg><use href="#i-outline"/></svg></button>
+    </div>
+  </header>
+  <div class="workspace">
+    <aside class="outline-panel" id="outline" aria-label="Outline" hidden><div class="panel-heading"><span id="outline-heading">Outline</span><button class="icon-button" id="outline-close" type="button" aria-label="Hide outline" title="Hide outline"><svg><use href="#i-close"/></svg></button></div><div class="outline-list" id="outline-list"></div></aside>
+    <main class="canvas" id="canvas" tabindex="0" aria-label="Interactive mind map">
+      <div class="world" id="world" role="tree" aria-label="Mind map nodes">
+        <svg class="connections" id="connections" aria-hidden="true"><defs><marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 1 7 4 0 7" fill="none" stroke="currentColor" stroke-width="1" stroke-linejoin="round"/></marker></defs><g id="edges"></g></svg>
+        <div id="nodes"></div>
+      </div>
+      <div class="selection-toolbar" role="toolbar" aria-label="Selected node actions">
+        <button id="add-child" type="button"><svg><use href="#i-child"/></svg><span data-i18n="child">Child</span><kbd>Tab</kbd></button>
+        <span class="divider"></span>
+        <button id="add-sibling" type="button"><svg><use href="#i-plus"/></svg><span data-i18n="sibling">Sibling</span><kbd>Enter</kbd></button>
+        <span class="divider"></span>
+        <button class="icon-button" id="fold-node" type="button" aria-label="Collapse / expand" title="Collapse / expand (Space)"><svg><use href="#i-fold"/></svg></button>
+        <button class="icon-button" id="node-more" type="button" aria-label="More node actions" title="More node actions" aria-haspopup="menu" aria-expanded="false" aria-controls="node-menu"><svg><use href="#i-more"/></svg></button>
+      </div>
+      <div class="node-menu" id="node-menu" role="menu" aria-label="More node actions" hidden>
+        <button id="edit-node" type="button" role="menuitem"><svg><use href="#i-edit"/></svg><span data-i18n="edit">Edit node</span><kbd>F2</kbd></button>
+        <button id="delete-node" type="button" role="menuitem"><svg><use href="#i-trash"/></svg><span data-i18n="remove">Delete branch</span><kbd>Del</kbd></button>
+      </div>
+      <div class="canvas-bottom"><div class="zoom-controls">
+        <button class="icon-button" id="zoom-out" type="button" aria-label="Zoom out" title="Zoom out"><svg><use href="#i-minus"/></svg></button>
+        <button class="zoom-value" id="zoom-value" type="button" title="100%">100%</button>
+        <button class="icon-button" id="zoom-in" type="button" aria-label="Zoom in" title="Zoom in"><svg><use href="#i-plus"/></svg></button>
+        <span class="divider"></span>
+        <button class="icon-button" id="fit" type="button" aria-label="Fit map" title="Fit map"><svg><use href="#i-fit"/></svg></button>
+      </div></div>
+    </main>
+  </div>
+  <div class="sr-only" id="announcement" role="status" aria-live="polite"></div>
+</div>
+</body>
+</html>

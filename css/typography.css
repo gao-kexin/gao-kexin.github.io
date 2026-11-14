@@ -1,0 +1,101 @@
+/* Each reading surface has its own hierarchy; sizes are visual pixels. */
+:root {
+  --type-section-title: 28px;
+  --type-entry-title: 22px;
+  --type-detail-title: 30px;
+  --type-subtitle: 24px;
+  --type-body: 18px;
+  --type-detail-body: 20px;
+  --type-action: 16px;
+  --type-small: 16px;
+  --detail-title-size: var(--type-detail-title);
+  --detail-title-leading: 1.3;
+  --detail-body-size: var(--type-detail-body);
+  --detail-body-leading: 1.6;
+}
+.home-section {
+  --overview-title-size: calc(var(--type-entry-title) / var(--editorial-scale, 1));
+  --overview-title-leading: 1.3;
+  --overview-body-size: calc(var(--type-body) / var(--editorial-scale, 1));
+  --overview-body-leading: 1.6;
+  --overview-small-size: calc(var(--type-small) / var(--editorial-scale, 1));
+  --overview-action-size: calc(var(--type-action) / var(--editorial-scale, 1));
+  --copy-base-size: var(--overview-body-size);
+  --copy-base-leading: var(--overview-body-leading);
+  font-size: var(--overview-body-size);
+  line-height: var(--overview-body-leading);
+}
+.home-section .section-heading h2 {
+  font-size: calc(var(--type-section-title) / var(--editorial-scale, 1));
+  line-height: 1.3;
+}
+.project-card-links, .section-open, .reading-action {
+  font-size: var(--overview-action-size);
+  line-height: 1.5;
+}
+.home-section :is(.section-open, .reading-action, .project-card-links button) {
+  min-height: calc(28px / var(--editorial-scale, 1));
+}
+.home-section :is(.guide-return, .project-copy-status, .section-copy-status),
+.research-summary .research-status, .research-cover-figure figcaption {
+  font-size: var(--overview-small-size);
+  line-height: 1.5;
+}
+.project-detail h2, .section-detail h2 {
+  font-size: var(--type-detail-title);
+  line-height: 1.3;
+  text-wrap: pretty;
+  margin-bottom: 24px;
+}
+.project-demo-heading h3, .section-detail h3, #mindset-detail h3 {
+  font-size: var(--type-subtitle);
+  line-height: 1.3;
+  font-weight: 400;
+  margin: 0 0 12px;
+  text-wrap: pretty;
+}
+.section-detail > h3 { margin-top: 32px; }
+.project-detail p, .section-detail p { margin: 0 0 1.15em; }
+.project-detail :is(.project-detail-top, .project-copy-status),
+.section-detail :is(.section-detail-top, .section-copy-status),
+.project-demo-heading a, #maps-detail > .section-copy-status { font-size: var(--type-small); line-height: 1.5; }
+.project-detail .project-demo-hint, #maps-detail > p[data-copy-key] {
+  font-size: var(--detail-body-size);
+  line-height: var(--detail-body-leading);
+}
+.section-detail .detail-link { font-size: var(--type-action); line-height: 1.5; }
+.section-detail .research-questions dt { font-size: var(--detail-body-size); line-height: 1.6; }
+.article-body[data-copy-key] { white-space: normal; overflow-wrap: break-word; }
+.article-body > p { white-space: pre-wrap; margin: 0 0 1.15em; }
+.article-body > h3 {
+  --copy-base-size: var(--type-subtitle);
+  --copy-base-leading: 1.3;
+  white-space: pre-wrap;
+  margin: 1.7em 0 .6em;
+}
+.article-body > :first-child { margin-top: 0; }
+.article-body > :last-child { margin-bottom: 0; }
+.article-body { min-height: 1.6em; }
+#taste-blog-detail > h2 { margin-bottom: 8px; }
+#taste-blog-detail .article-subtitle { font-style: italic; margin-bottom: 1.8em; }
+.article-body[data-copy-rich] > div { margin: 0 0 1.15em; }
+.article-body a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .16em; cursor: pointer; }
+.article-body sup { font-size: .72em; line-height: 0; }
+.article-body sup a { text-decoration: none; }
+.article-body sup a:hover { text-decoration: underline; }
+.article-body .article-references {
+  margin: 0; padding-left: 1.4em; font-size: var(--type-small); line-height: 1.6;
+}
+.article-references li { padding-left: .35em; margin-bottom: 1em; scroll-margin-top: 32px; }
+.article-references li:last-child { margin-bottom: 0; }
+@media (max-width: 848px) {
+  :root {
+    --type-section-title: 26px;
+    --type-entry-title: 21px;
+    --type-detail-title: 28px;
+  }
+}
+@media (max-width: 520px) {
+  .reading-row { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+  .reading-action { justify-self: start; }
+}
