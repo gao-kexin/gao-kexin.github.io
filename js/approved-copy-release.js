@@ -1,6 +1,6 @@
 (() => {
   'use strict';
-  const releaseKey = 'gao-kexin.approved-copy-release.2026-11-15.v3';
+  const releaseKey = 'gao-kexin.approved-copy-release.2026-11-15.v4';
   const draftKey = 'gao-kexin.home.bio-draft.v1';
   const blocksKey = 'gao-kexin.home.bio-blocks.v1';
   const sectionsKey = 'gao-kexin.section-copy-drafts.v1';
@@ -33,6 +33,15 @@
     "Blog — a place to think in writing, explore questions, and revisit my views as I learn."
   ],
   "sectionCorrections": {
+    "mindset.taste.teaser": {
+      "from": ["I wrote a blog about my thoughts on taste."],
+      "to": "I wrote a blog post about my thoughts on taste."
+    },
+    "blog.second.body": {
+      "from": ["Strong execution is valuable, but it compounds linearly: it makes the current plan go faster."],
+      "to": "Strong execution helps move a plan forward.",
+      "partial": true
+    },
     "mindset.limits.title": {
       "from": ["My Limits"],
       "to": "My Current Limits"
@@ -77,14 +86,38 @@
       writes.set(formatsKey, JSON.stringify(formats));
     }
     const sections = JSON.parse(original[sectionsKey] || '{}');
+    const formats = JSON.parse(writes.get(formatsKey) || original[formatsKey] || '{}');
     let corrected = false;
+    let formatted = false;
     for (const [key, correction] of Object.entries(approved.sectionCorrections)) {
-      if (correction.from.includes(sections[key])) {
-        sections[key] = correction.to;
-        corrected = true;
+      const before = sections[key];
+      if (typeof before !== 'string') continue;
+      const from = correction.from.find(text => correction.partial ? before.includes(text) : before === text);
+      if (from === undefined) continue;
+      const start = before.indexOf(from), end = start + from.length;
+      const after = before.slice(0, start) + correction.to + before.slice(end);
+      sections[key] = after;
+      corrected = true;
+      const format = formats['section:' + key];
+      if (format?.text === before) {
+        const delta = correction.to.length - from.length;
+        const shift = position => position <= start ? position : position >= end ? position + delta : start + Math.min(position - start, correction.to.length);
+        format.text = after;
+        for (const kind of ['marks', 'headings']) {
+          if (Array.isArray(format[kind])) format[kind] = format[kind]
+            .map(range => ({ ...range, start: shift(range.start), end: shift(range.end) }))
+            .filter(range => range.end > range.start);
+        }
+        if (typeof format.html === 'string') {
+          if (format.html.includes(from)) format.html = format.html.replace(from, correction.to);
+          // Split inline spans fall back to the preserved heading and emphasis ranges.
+          else delete format.html;
+        }
+        formatted = true;
       }
     }
     if (corrected) writes.set(sectionsKey, JSON.stringify(sections));
+    if (formatted) writes.set(formatsKey, JSON.stringify(formats));
     if (writes.size) {
       localStorage.setItem(releaseKey + '.backup', JSON.stringify(original));
       for (const [key, value] of writes) localStorage.setItem(key, value);
