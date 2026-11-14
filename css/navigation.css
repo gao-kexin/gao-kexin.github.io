@@ -77,11 +77,8 @@
   display: none !important;
 }
 [data-navigation-area] :is([contenteditable="true"], [data-section-copy-status], [data-project-draft-status]) { cursor: text; }
-[data-navigation-area]:hover:not(:has([contenteditable="true"]:hover)) > .mindset-overview-action > [data-area-action],
-.mindset-taste:hover:not(:has([contenteditable="true"]:hover)) [data-area-action],
-.project-card:hover:not(:has([contenteditable="true"]:hover)) [data-area-action],
-.reading-row:hover:not(:has([contenteditable="true"]:hover)) [data-area-action],
-.map-feature:hover:not(:has([contenteditable="true"]:hover)) + .mindset-overview-action > [data-area-action] {
+/* Only the action resolved for the pointer receives the area's hover feedback. */
+[data-area-action][data-area-hover] {
   font-weight: 700;
   text-decoration-line: underline;
   text-decoration-thickness: var(--link-underline-hover-width);
