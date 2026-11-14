@@ -16,8 +16,12 @@ if (location.hash) history.replaceState(null, '', location.pathname + location.s
   function fitViewport() {
     const width = window.innerWidth;
     const scale = width >= 1000 ? Math.min(1, (width / 2 - 15) / 1320) : 1;
+    // Match the approved reading proportions at a 2048px desktop viewport,
+    // with a floor so text remains readable in narrower split columns.
+    const readingScale = width >= 1000 ? Math.max(.75, Math.min(1, width / 2048)) : 1;
     const style = document.documentElement.style;
     style.setProperty('--editorial-scale', String(scale));
+    style.setProperty('--reading-type-scale', String(readingScale));
     style.setProperty('--editorial-shift', `${-(width - 1320 * scale) / (2 * scale)}px`);
   }
   fitViewport();
@@ -41,12 +45,12 @@ if (location.hash) history.replaceState(null, '', location.pathname + location.s
 <link href="./css/projects.css?v=purpose-labels" rel="stylesheet"/>
 <link href="./css/mindset-research.css?v=research-natural-gap" rel="stylesheet"/>
 <link href="./css/copy-formatting.css?v=selection-size" rel="stylesheet"/>
-<link href="./css/typography.css?v=overview-body-20" rel="stylesheet"/>
+<link href="./css/typography.css?v=responsive-reading-type" rel="stylesheet"/>
 <link href="./css/navigation.css?v=isolated-navigation" rel="stylesheet"/>
   <script defer src="./js/approved-copy-release.js?v=approved-2026-11-14-aliases"></script>
   <script defer src="./js/title-case.js?v=authored-article"></script>
 <script defer src="./js/action-copy-release.js?v=purpose-labels"></script>
-  <script defer src="./js/copy-formatting.js?v=reading-mode"></script>
+  <script defer src="./js/copy-formatting.js?v=responsive-reading-type"></script>
 <script defer="" src="./js/portrait-contacts.js?v=purpose-labels"></script>
 <script defer="" src="./js/section-navigation.js?v=scroll-overlay"></script>
 <script defer="" src="./js/template.js?v=stable-first-paint"></script>

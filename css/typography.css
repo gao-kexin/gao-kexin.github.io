@@ -1,19 +1,21 @@
-/* Each reading surface has its own hierarchy; sizes are visual pixels. */
+/* Keep the reading hierarchy proportional to the desktop columns. */
 :root {
-  --type-section-title: 28px;
-  --type-entry-title: 22px;
-  --type-detail-title: 30px;
-  --type-subtitle: 24px;
-  --type-body: 20px;
-  --type-detail-body: 20px;
-  --type-action: 16px;
-  --type-small: 16px;
+  --reading-type-scale: 1;
+  --type-section-title: calc(28px * var(--reading-type-scale));
+  --type-entry-title: calc(22px * var(--reading-type-scale));
+  --type-detail-title: calc(30px * var(--reading-type-scale));
+  --type-subtitle: calc(24px * var(--reading-type-scale));
+  --type-body: calc(20px * var(--reading-type-scale));
+  --type-detail-body: calc(20px * var(--reading-type-scale));
+  --type-action: calc(16px * var(--reading-type-scale));
+  --type-small: calc(16px * var(--reading-type-scale));
   --detail-title-size: var(--type-detail-title);
   --detail-title-leading: 1.3;
   --detail-body-size: var(--type-detail-body);
   --detail-body-leading: 1.6;
 }
 .home-section {
+  --copy-display-scale: calc(var(--editorial-scale, 1) / var(--reading-type-scale));
   --overview-title-size: calc(var(--type-entry-title) / var(--editorial-scale, 1));
   --overview-title-leading: 1.3;
   --overview-body-size: calc(var(--type-body) / var(--editorial-scale, 1));
@@ -24,6 +26,9 @@
   --copy-base-leading: var(--overview-body-leading);
   font-size: var(--overview-body-size);
   line-height: var(--overview-body-leading);
+}
+.project-detail, .section-detail {
+  --copy-display-scale: calc(1 / var(--reading-type-scale));
 }
 .home-section .section-heading h2 {
   font-size: calc(var(--type-section-title) / var(--editorial-scale, 1));

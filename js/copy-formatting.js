@@ -144,7 +144,10 @@
   function displayScale(element) {
     if (element.dataset.copyFormat?.startsWith('bio:')) return 1;
     const surface = element.closest('.editorial-surface');
-    return surface ? Number.parseFloat(getComputedStyle(surface).zoom) || 1 : 1;
+    const sheetScale = surface ? Number.parseFloat(getComputedStyle(surface).zoom) || 1 : 1;
+    const readingScale = element.closest('.home-section, .project-detail, .section-detail')
+      ? Number.parseFloat(getComputedStyle(element).getPropertyValue('--reading-type-scale')) || 1 : 1;
+    return sheetScale / readingScale;
   }
   function refreshBase(element) {
     if (!element.isConnected) return;
